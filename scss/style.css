@@ -2,7 +2,7 @@
 /*font Variables*/
 /*Color Variables*/
 /*=================== fonts ====================*/
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /* Medium Layout: 1280px */
@@ -26,7 +26,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 500;
   color: #ffffff;
 }
@@ -183,7 +183,7 @@ button:focus {
   display: inline-block;
   color: #fff;
   letter-spacing: 0px;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 46px;
@@ -235,7 +235,6 @@ button:focus {
   position: absolute;
   width: 100%;
   z-index: 9999;
-  background: #ffffff;
 }
 .header_area .menu_nav {
   width: 100%;
@@ -247,11 +246,14 @@ button:focus {
   border-radius: 0px;
   width: 100%;
 }
+.header_area .navbar .navbar-brand {
+  width: 15%;
+}
 .header_area .navbar .nav .nav-item {
   margin-right: 45px;
 }
 .header_area .navbar .nav .nav-item .nav-link {
-  font: 500 14px/100px "Bebas Neue", sans-serif;
+  font: 300 16px/100px "Oswald", sans-serif;
   text-transform: uppercase;
   color: #ffffff;
   padding: 0px;
@@ -347,7 +349,7 @@ button:focus {
   top: -70px;
   left: 0;
   right: 0;
-  background: #ffffff;
+  background: transparent;
   transform: translateY(70px);
   transition: transform 500ms ease, background 500ms ease;
   -webkit-transition: transform 500ms ease, background 500ms ease;
@@ -396,9 +398,11 @@ button:focus {
 ============================================================================================ */
 .home_banner_area {
   z-index: 1;
-  background: url(../img/banner/home-banner.png) no-repeat top center;
+  background: url(../img/banner/blue_bg.png) no-repeat bottom center;
   background-position: center;
   background-size: cover;
+  background-color: #000000;
+  height: 110vh;
 }
 .home_banner_area .banner_inner {
   width: 100%;
@@ -422,12 +426,11 @@ button:focus {
   align-self: center;
 }
 .home_banner_area .banner_inner .banner_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: left;
-}
-@media (max-width: 991px) {
-  .home_banner_area .banner_inner .banner_content {
-    margin-top: 150px;
-  }
 }
 .home_banner_area .banner_inner .banner_content h3 {
   font-size: 40px;
@@ -473,7 +476,6 @@ button:focus {
 }
 
 .banner_area {
-  position: relative;
   z-index: 1;
   min-height: 485px;
 }
@@ -516,7 +518,7 @@ button:focus {
 .banner_area .banner_inner .banner_content h2 {
   color: #fff;
   font-size: 50px;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Oswald", sans-serif;
   margin-bottom: 10px;
   text-transform: uppercase;
   font-weight: 700;
@@ -2895,6 +2897,7 @@ h6 {
 /* Start About Us Area css
 ============================================================================================ */
 .about_area {
+  background-color: #000000;
   position: relative;
 }
 .about_area .main_title {
@@ -3063,7 +3066,7 @@ h6 {
 }
 .client-info .lage {
   color: #854fee;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 100px;
   font-weight: 700;
   line-height: 85px;
@@ -3073,7 +3076,7 @@ h6 {
 .client-info .smll {
   text-align: left;
   color: #ffffff;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 20px;
   margin-left: 20px;
 }
@@ -3232,7 +3235,7 @@ h6 {
   margin-bottom: 7px;
 }
 .portfolio_details_inner .portfolio_right_text .list li span {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Oswald", sans-serif;
   color: #000000;
   font-size: 16px;
   font-weight: 500;
@@ -3395,7 +3398,7 @@ h6 {
   border-radius: 5px;
   line-height: 48px;
   font-size: 14px;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Oswald", sans-serif;
   padding: 0px 38px;
   cursor: pointer;
 }

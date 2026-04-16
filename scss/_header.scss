@@ -3,7 +3,6 @@
     position: absolute;
     width: 100%;
     z-index: 9999;
-    background: #ffffff;
     .menu_nav {
         width: 100%;
     }
@@ -13,12 +12,14 @@
         border: 0px;
         border-radius: 0px;
         width: 100%;
+        .navbar-brand {
+            width: 15%;
+        }
         .nav {
             .nav-item {
                 margin-right: 45px;
                 .nav-link {
-                    $title-color: #ffffff;
-                    font: 500 14px/100px $title-font;
+                    font: 300 16px/100px $title-font;
                     text-transform: uppercase;
                     color: $title-color;
                     padding: 0px;
@@ -124,7 +125,7 @@
             top: -70px;
             left: 0;
             right: 0;
-            background: #ffffff;
+            background: transparent;
             transform: translateY(70px);
             transition: transform 500ms ease, background 500ms ease;
             -webkit-transition: transform 500ms ease, background 500ms ease;

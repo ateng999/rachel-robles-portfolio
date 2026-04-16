@@ -3,9 +3,11 @@
 
 .home_banner_area {
 	z-index: 1;
-	background: url(../img/banner/home-banner.png) no-repeat top center;
+	background: url(../img/banner/blue_bg.png) no-repeat bottom center;
 	background-position: center;
 	background-size: cover;
+	background-color: #000000;
+	height: 110vh;
 	.banner_inner {
 		width: 100%;
 		.home_right_img {
@@ -25,10 +27,11 @@
 			align-self: center;
 		}
 		.banner_content {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 			text-align: left;
-			@media (max-width: 991px) {
-				margin-top: 150px;
-			}
 			h3 {
 				font-size: 40px;
 				margin-bottom: 20px;
@@ -70,7 +73,6 @@
 }
 
 .banner_area {
-	position: relative;
 	z-index: 1;
 	min-height: 485px;
 	@media (max-width: 1199px) {
