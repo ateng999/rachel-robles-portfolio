@@ -10,50 +10,14 @@
 	height: 110vh;
 	.banner_inner {
 		width: 100%;
-		.home_right_img {
-			padding-top: 197px;
-			@media (max-width: 1480px) {
-				img {
-					max-width: 100%;
-					height: auto;
-				}
-			}
-			@media (max-width: 991px) {
-				display: none;
-			}
-		}
-		.col-lg-7 {
-			vertical-align: middle;
-			align-self: center;
-		}
 		.banner_content {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
+			position: relative;
 			text-align: left;
-			h3 {
-				font-size: 40px;
-				margin-bottom: 20px;
-				position: relative;
-				&:after {
-					content: '';
-					width: 410px;
-					height: 2px;
-					position: absolute;
-					top: 50%;
-					left: 23%;
-					background: $title-color;
-					@media (max-width: 575px) {
-						display: none;
-					}
-				}
-			}
 			h1 {
-				margin-top: 20px;
+				margin-bottom: 30px;
 				font-size: 70px;
 				line-height: 60px;
-				margin-bottom: 25px;
+				font-weight: 300;
 				@media (max-width: 1024px) {
 					font-size: 60px;
 				}
@@ -64,6 +28,7 @@
 			h5 {
 				font-size: 24px;
 				margin-bottom: 35px;
+				text-align: center;
 			}
 			.primary_btn {
 				margin-right: 20px;
