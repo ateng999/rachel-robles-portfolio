@@ -3,7 +3,7 @@
 
 .home_banner_area {
 	z-index: 1;
-	background: url(../img/banner/blue_bg.png) no-repeat bottom center;
+	background: linear-gradient(180deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 82%, rgba(0, 0, 0, 1) 100%), url(../img/banner/blue_bg.png) no-repeat bottom center;
 	background-position: center;
 	background-size: cover;
 	background-color: #000000;
@@ -32,6 +32,85 @@
 			}
 			.primary_btn {
 				margin-right: 20px;
+			}
+		}
+		.mouse-wrap {
+			position: absolute;
+			display: inline-block;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 15px;
+			z-index: 9;
+			&:active, &:focus {
+				&, & > .mouse-label {
+					outline: none;
+				}
+			}
+			&.mouse-with-slider {
+				bottom: -50px;
+			}
+			.mouse-label {
+				top: 0;
+				color: $title-color;
+				font-size: 10px;
+				font-weight: 700;
+				letter-spacing: .05rem;
+				text-transform: uppercase;
+			}
+
+			&.dark {
+				.mouse-label {
+					color: $black;
+				}
+				.mouse {
+					border: 2px solid $black;
+					.scroll {
+						background: $black;
+					}
+				}
+			}
+			.mouse {
+				position: absolute;
+				width: 22px;
+				height: 42px;
+				bottom: 30px;
+				display: block;
+				left: 50%;
+				margin-left: -12px;
+				border-radius: 15px;
+				border: 2px solid $title-color;
+				animation: intro 2s;
+			.scroll {
+				display: block;
+				width: 3px;
+				height: 3px;
+				margin: 6px auto;
+				border-radius: 4px;
+				background: $title-color;
+				animation: finger 2s infinite;
+			}
+
+
+				@keyframes intro {
+				0% {
+					opacity: 0;
+					transform: translateY(40px);
+				}
+				100% {
+					opacity: 1;
+					transform: translateY(0);
+				}
+				}
+
+				@keyframes finger {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+					transform: translateY(20px);
+				}
+				}
 			}
 		}
 	}

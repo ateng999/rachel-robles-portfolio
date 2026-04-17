@@ -2,7 +2,6 @@
 ============================================================================================ */
 .about_area {
 	background-color: #000000;
-	position: relative;
 	.main_title {
 		margin-bottom: 0px;
 		p {
@@ -14,9 +13,11 @@
 	}
 	.about_img {
 		position: relative;
-		right: 250px;
+		img {
+			width: 100%;
+			max-width: 100%;
+		}
 		@media (max-width: 1480px) {
-			right: 0;
 			img {
 				max-width: 100%;
 				height: auto;

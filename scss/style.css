@@ -398,7 +398,7 @@ button:focus {
 ============================================================================================ */
 .home_banner_area {
   z-index: 1;
-  background: url(../img/banner/blue_bg.png) no-repeat bottom center;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 82%, rgb(0, 0, 0) 100%), url(../img/banner/blue_bg.png) no-repeat bottom center;
   background-position: center;
   background-size: cover;
   background-color: #000000;
@@ -434,6 +434,77 @@ button:focus {
 }
 .home_banner_area .banner_inner .banner_content .primary_btn {
   margin-right: 20px;
+}
+.home_banner_area .banner_inner .mouse-wrap {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 15px;
+  z-index: 9;
+}
+.home_banner_area .banner_inner .mouse-wrap:active, .home_banner_area .banner_inner .mouse-wrap:active > .mouse-label, .home_banner_area .banner_inner .mouse-wrap:focus, .home_banner_area .banner_inner .mouse-wrap:focus > .mouse-label {
+  outline: none;
+}
+.home_banner_area .banner_inner .mouse-wrap.mouse-with-slider {
+  bottom: -50px;
+}
+.home_banner_area .banner_inner .mouse-wrap .mouse-label {
+  top: 0;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+.home_banner_area .banner_inner .mouse-wrap.dark .mouse-label {
+  color: #000000;
+}
+.home_banner_area .banner_inner .mouse-wrap.dark .mouse {
+  border: 2px solid #000000;
+}
+.home_banner_area .banner_inner .mouse-wrap.dark .mouse .scroll {
+  background: #000000;
+}
+.home_banner_area .banner_inner .mouse-wrap .mouse {
+  position: absolute;
+  width: 22px;
+  height: 42px;
+  bottom: 30px;
+  display: block;
+  left: 50%;
+  margin-left: -12px;
+  border-radius: 15px;
+  border: 2px solid #ffffff;
+  animation: intro 2s;
+}
+.home_banner_area .banner_inner .mouse-wrap .mouse .scroll {
+  display: block;
+  width: 3px;
+  height: 3px;
+  margin: 6px auto;
+  border-radius: 4px;
+  background: #ffffff;
+  animation: finger 2s infinite;
+}
+@keyframes intro {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes finger {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 }
 
 .banner_area {
@@ -2859,7 +2930,6 @@ h6 {
 ============================================================================================ */
 .about_area {
   background-color: #000000;
-  position: relative;
 }
 .about_area .main_title {
   margin-bottom: 0px;
@@ -2872,12 +2942,12 @@ h6 {
 }
 .about_area .about_img {
   position: relative;
-  right: 250px;
+}
+.about_area .about_img img {
+  width: 100%;
+  max-width: 100%;
 }
 @media (max-width: 1480px) {
-  .about_area .about_img {
-    right: 0;
-  }
   .about_area .about_img img {
     max-width: 100%;
     height: auto;
