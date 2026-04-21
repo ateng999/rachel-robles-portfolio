@@ -159,20 +159,20 @@ button:focus {
 /* Start Gradient Area css
 ============================================================================================ */
 .gradient-bg, .comments-area .btn-reply:hover, .blog-pagination .page-link:hover, .blog-pagination .page-item.active .page-link, .blog_right_sidebar .tag_cloud_widget ul li a:hover, .blog_right_sidebar .newsletter_widget .bbtns, .blog_right_sidebar .widget_title, .header_area .navbar .nav .nav-item.submenu ul .nav-item:hover .nav-link {
-  background: linear-gradient(90deg, #0f8ade 0%, #0b84b4 100%);
+  background: linear-gradient(90deg, #00f5ff 0%, #0047CC 100%);
 }
 
 .border-gradient {
-  -o-border-image: linear-gradient(90deg, #0f8ade 0%, #0b84b4 100%);
-     border-image: linear-gradient(90deg, #0f8ade 0%, #0b84b4 100%);
+  -o-border-image: linear-gradient(90deg, #00f5ff 0%, #0047CC 100%);
+     border-image: linear-gradient(90deg, #00f5ff 0%, #0047CC 100%);
 }
 
 .gradient-bg2 {
-  background: linear-gradient(90deg, #0f8ade 0%, #0b84b4 100%);
+  background: linear-gradient(90deg, #00f5ff 0%, #0047CC 100%);
 }
 
 .gradient-color, .contact_info .info_item i {
-  background: linear-gradient(90deg, #0f8ade 0%, #0b84b4 100%);
+  background: linear-gradient(90deg, #00f5ff 0%, #0047CC 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -194,7 +194,7 @@ button:focus {
   border-radius: 5px;
   background-origin: border-box;
   background-clip: content-box, border-box;
-  background-image: linear-gradient(to right, #0f8ade 0%, #0b84b4 100%), radial-gradient(circle at top left, #0f8ade, #0b84b4);
+  background-image: linear-gradient(to right, #00f5ff 0%, #0047CC 100%), radial-gradient(circle at top left, #00f5ff, #0047CC);
   border: double 2px transparent;
   box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
 }
@@ -202,20 +202,20 @@ button:focus {
   padding: 0 42px;
 }
 .primary_btn.tr-bg {
-  background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, #0f8ade, #0b84b4);
+  background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, #00f5ff, #0047CC);
   border: 2px solid transparent;
   color: #222222;
   box-shadow: none;
 }
 .primary_btn.tr-bg:hover {
-  background-image: linear-gradient(to right, #0f8ade 0%, #0b84b4 100%), radial-gradient(circle at top left, #0f8ade, #0b84b4);
+  background-image: linear-gradient(to right, #00f5ff 0%, #0047CC 100%), radial-gradient(circle at top left, #00f5ff, #0047CC);
   border: double 2px transparent;
   color: #ffffff;
   box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
 }
 .primary_btn:hover {
-  background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, #0f8ade, #0b84b4);
-  border: 2px solid #0b84b4;
+  background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, #00f5ff, #0047CC);
+  border: 2px solid #0047CC;
   color: #222222;
   box-shadow: none;
   background-clip: border-box;
@@ -271,7 +271,7 @@ button:focus {
   display: none;
 }
 .header_area .navbar .nav .nav-item:hover .nav-link, .header_area .navbar .nav .nav-item.active .nav-link {
-  color: #0f8ade;
+  color: #00f5ff;
 }
 .header_area .navbar .nav .nav-item.submenu {
   position: relative;
@@ -514,7 +514,7 @@ button:focus {
 }
 @media (max-width: 991px) {
   .banner_area .banner_inner {
-    background: #0b84b4;
+    background: #0047CC;
     width: 100%;
   }
 }
@@ -582,8 +582,8 @@ button:focus {
   display: inline-block;
 }
 .blog_btn:hover {
-  background: #0f8ade;
-  border-color: #0f8ade;
+  background: #00f5ff;
+  border-color: #00f5ff;
   color: #fff;
 }
 
@@ -601,7 +601,7 @@ button:focus {
   border: none;
 }
 .white_bg_btn:hover {
-  background: #0f8ade;
+  background: #00f5ff;
   color: #fff;
 }
 
@@ -622,7 +622,7 @@ button:focus {
   margin-right: 0px;
 }
 .causes_slider .owl-dots .owl-dot.active {
-  background: #0f8ade;
+  background: #00f5ff;
 }
 
 .causes_item {
@@ -642,7 +642,7 @@ button:focus {
 .causes_item .causes_img .c_parcent span {
   width: 70%;
   height: 3px;
-  background: #0f8ade;
+  background: #00f5ff;
   position: absolute;
   left: 0px;
   bottom: 0px;
@@ -652,7 +652,7 @@ button:focus {
   position: absolute;
   right: -10px;
   bottom: 0px;
-  background: #0f8ade;
+  background: #00f5ff;
   color: #fff;
   padding: 0px 5px;
 }
@@ -668,7 +668,7 @@ button:focus {
   cursor: pointer;
 }
 .causes_item .causes_text h4:hover {
-  color: #0f8ade;
+  color: #00f5ff;
 }
 .causes_item .causes_text p {
   font-size: 14px;
@@ -679,11 +679,11 @@ button:focus {
 }
 .causes_item .causes_bottom a {
   width: 50%;
-  border: 1px solid #0f8ade;
+  border: 1px solid #00f5ff;
   text-align: center;
   float: left;
   line-height: 50px;
-  background: #0f8ade;
+  background: #00f5ff;
   color: #fff;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
@@ -739,7 +739,7 @@ button:focus {
   color: #ffffff;
 }
 .tags .tag_btn:before {
-  background: #0f8ade;
+  background: #00f5ff;
 }
 .tags .tag_btn + .tag_btn {
   margin-left: 2px;
@@ -793,7 +793,7 @@ button:focus {
   height: 1px;
 }
 .categories_post:hover .categories_details {
-  background: rgba(15, 138, 222, 0.85);
+  background: rgba(0, 245, 255, 0.85);
 }
 
 /*============ blog_left_sidebar css ==============*/
@@ -815,7 +815,7 @@ button:focus {
   color: #777777;
 }
 .blog_info .post_tag a.active {
-  color: #0f8ade;
+  color: #00f5ff;
 }
 .blog_info .blog_meta li a {
   font: 300 14px/20px "Roboto", sans-serif;
@@ -833,7 +833,7 @@ button:focus {
   vertical-align: middle;
 }
 .blog_info .blog_meta li a:hover {
-  color: #0f8ade;
+  color: #00f5ff;
 }
 
 .blog_post img {
@@ -854,7 +854,7 @@ button:focus {
   transition: all 0.3s linear;
 }
 .blog_details h2:hover {
-  color: #0f8ade;
+  color: #00f5ff;
 }
 .blog_details p {
   margin-bottom: 26px;
@@ -894,8 +894,8 @@ button:focus {
   border-radius: 45px;
   z-index: 0;
   border: double 2px transparent;
-  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #0f8ade, #0b84b4);
-  background-image: -o-linear-gradient(white, white), -o-radial-gradient(circle at top left, #0f8ade, #0b84b4);
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #00f5ff, #0047CC);
+  background-image: -o-linear-gradient(white, white), -o-radial-gradient(circle at top left, #00f5ff, #0047CC);
   background-origin: border-box;
   background-clip: content-box, border-box;
   padding: 0;
@@ -963,7 +963,7 @@ button:focus {
   margin-left: 20px;
 }
 .blog_right_sidebar .author_widget .social_icon a:hover {
-  color: #0f8ade;
+  color: #00f5ff;
 }
 .blog_right_sidebar .popular_post_widget .post_item .media-body {
   justify-content: center;
@@ -978,7 +978,7 @@ button:focus {
   transition: all 0.3s linear;
 }
 .blog_right_sidebar .popular_post_widget .post_item .media-body h3:hover {
-  color: #0f8ade;
+  color: #00f5ff;
 }
 .blog_right_sidebar .popular_post_widget .post_item .media-body p {
   font-size: 12px;
@@ -1005,10 +1005,10 @@ button:focus {
   padding-top: 15px;
 }
 .blog_right_sidebar .post_category_widget .cat-list li:hover a {
-  color: #0f8ade;
+  color: #00f5ff;
 }
 .blog_right_sidebar .post_category_widget .cat-list li:hover {
-  border-color: #0f8ade;
+  border-color: #00f5ff;
 }
 .blog_right_sidebar .newsletter_widget {
   text-align: center;
@@ -1149,7 +1149,7 @@ button:focus {
   transition: all 0.2s linear;
 }
 .single-post-area .social-links li a:hover {
-  color: #0f8ade;
+  color: #00f5ff;
 }
 .single-post-area .blog_details {
   padding-top: 26px;
@@ -1492,7 +1492,7 @@ button:focus {
 .modal-message .modal-dialog .modal-content .modal-header h2 {
   display: block;
   text-align: center;
-  color: #0f8ade;
+  color: #00f5ff;
   padding-bottom: 10px;
   font-family: "Roboto", sans-serif;
 }
@@ -1524,25 +1524,25 @@ button:focus {
 }
 .sample-text-area p b {
   font-weight: bold;
-  color: #0f8ade;
+  color: #00f5ff;
 }
 .sample-text-area p i {
-  color: #0f8ade;
+  color: #00f5ff;
   font-style: italic;
 }
 .sample-text-area p sup {
-  color: #0f8ade;
+  color: #00f5ff;
   font-style: italic;
 }
 .sample-text-area p sub {
-  color: #0f8ade;
+  color: #00f5ff;
   font-style: italic;
 }
 .sample-text-area p del {
-  color: #0f8ade;
+  color: #00f5ff;
 }
 .sample-text-area p u {
-  color: #0f8ade;
+  color: #00f5ff;
 }
 
 /*============== End Elements Area css ================*/
@@ -1667,11 +1667,11 @@ button:focus {
 
 .link-border {
   background: transparent;
-  border: 1px solid #0f8ade;
-  color: #0f8ade;
+  border: 1px solid #00f5ff;
+  color: #00f5ff;
 }
 .link-border:before {
-  background: #0f8ade;
+  background: #00f5ff;
 }
 
 .radius {
@@ -3061,67 +3061,57 @@ h6 {
   }
 }
 .skills .section-title {
-  text-align: center;
-  font-size: 2.8rem;
-  margin-bottom: 70px;
-  letter-spacing: 1px;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #fff;
+  text-align: left;
 }
 .skills .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
-.skills .skill-card {
-  position: relative;
-  border-radius: 20px;
-  padding: 2px;
-  overflow: hidden;
-  background: linear-gradient(120deg, #00f5ff, #8a2be2, #00f5ff);
-  background-size: 200% 200%;
-  animation: borderMove 6s linear infinite;
-}
-.skills .skill-card .skill-content {
-  background: rgba(10, 10, 10, 0.75);
-  backdrop-filter: blur(18px);
-  border-radius: 18px;
-  padding: 25px;
-  height: 100%;
-  transition: transform 0.4s ease;
-}
-.skills .skill-card:hover .skill-content {
-  transform: translateY(-8px) scale(1.02);
-}
-.skills h3 {
-  margin-bottom: 10px;
-  font-size: 1.3rem;
-}
-.skills p {
-  font-size: 0.9rem;
-  opacity: 0.7;
-  margin-bottom: 20px;
-}
-.skills .skill-meter {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  position: relative;
-  background: conic-gradient(#00f5ff 0%, transparent 0%);
+  max-width: 700px;
+  margin: auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
 }
-.skills .skill-meter span {
+.skills .skill {
+  text-align: left;
+}
+.skills .skill span {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #fff;
+}
+.skills .skill .progress {
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+.skills .skill .progress-bar {
+  height: 100%;
+  width: 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #00f5ff, #0047CC);
+  transition: width 1.5s ease;
+  position: relative;
+}
+.skills .skill .progress-bar::after {
+  content: "";
   position: absolute;
-  font-size: 0.9rem;
-  font-weight: 600;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: shine 2s infinite;
 }
 
-@keyframes borderMove {
+@keyframes shine {
   0% {
-    background-position: 0% 50%;
+    transform: translateX(-100%);
   }
   100% {
-    background-position: 200% 50%;
+    transform: translateX(100%);
   }
 }
 /* End Barand Area css
@@ -3215,7 +3205,6 @@ h6 {
   padding: 25px 30px;
   background: #000000;
   text-align: center;
-  position: relative;
   margin-top: 25px;
 }
 @media only screen and (max-width: 991px) {
@@ -3228,31 +3217,17 @@ h6 {
     padding-top: 50px;
   }
 }
-.client-info:before {
-  content: "";
-  position: absolute;
-  top: -25px;
-  left: -50px;
-  background: url(../img/client-info-bg.png) no-repeat;
-  height: 175px;
-  width: 175px;
-}
-@media (max-width: 575px) {
-  .client-info:before {
-    background: none;
-  }
-}
 @media (max-width: 575px) {
   .client-info .d-flex {
     align-items: center;
   }
 }
 .client-info .lage {
-  color: #0b84b4;
+  color: #00f5ff;
   font-family: "Oswald", sans-serif;
-  font-size: 100px;
+  font-size: 170px;
   font-weight: 700;
-  line-height: 85px;
+  line-height: 1;
   position: relative;
   z-index: 9;
 }
@@ -3261,7 +3236,9 @@ h6 {
   color: #ffffff;
   font-family: "Oswald", sans-serif;
   font-size: 20px;
-  margin-left: 20px;
+}
+.client-info .l-spc {
+  letter-spacing: 5px;
 }
 
 .call-now {
@@ -3280,7 +3257,7 @@ h6 {
   }
 }
 .call-now p {
-  color: #0b84b4;
+  color: #0047CC;
   font-size: 16px;
   text-transform: uppercase;
   margin-bottom: 5px;
@@ -3323,7 +3300,7 @@ h6 {
   transition: all 0.4s ease 0s;
 }
 .portfolio_area .filters ul li:hover, .portfolio_area .filters ul li.active {
-  color: #0b84b4;
+  color: #0047CC;
 }
 @media (max-width: 767px) {
   .portfolio_area .filters ul li {
@@ -3456,7 +3433,7 @@ h6 {
 .testimonial_area .owl-carousel .owl-dots .owl-dot.active {
   height: 12px;
   width: 12px;
-  background: #0b84b4;
+  background: #0047CC;
 }
 @media (max-width: 991px) {
   .testimonial_area .owl-carousel .owl-dots {
@@ -4039,7 +4016,7 @@ h6 {
   }
 }
 .footer_area .footer_social a i:hover {
-  color: #0b84b4;
+  color: #0047CC;
 }
 .footer_area .footer_bottom {
   text-align: center;
@@ -4048,7 +4025,7 @@ h6 {
   margin-bottom: 0;
 }
 .footer_area .footer_bottom a {
-  color: #0b84b4;
+  color: #0047CC;
 }
 
 /* End Footer Area css

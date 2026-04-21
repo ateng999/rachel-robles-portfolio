@@ -189,75 +189,70 @@
 		padding-bottom: 80px;
 	}
 	.section-title {
-		text-align: center;
-		font-size: 2.8rem;
-		margin-bottom: 70px;
-		letter-spacing: 1px;
+		font-size: 2.5rem;
+		margin-bottom: 50px;
+		color: #fff;
+		text-align: left;
 	}
 
 	.skills-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-		gap: 30px;
-	}
-
-	.skill-card {
-		position: relative;
-		border-radius: 20px;
-		padding: 2px;
-		overflow: hidden;
-
-		background: linear-gradient(120deg, #00f5ff, #8a2be2, #00f5ff);
-		background-size: 200% 200%;
-		animation: borderMove 6s linear infinite;
-
-		.skill-content {
-			background: rgba(10, 10, 10, 0.75);
-			backdrop-filter: blur(18px);
-			border-radius: 18px;
-			padding: 25px;
-			height: 100%;
-			transition: transform 0.4s ease;
-		}
-
-		&:hover .skill-content {
-			transform: translateY(-8px) scale(1.02);
-		}
-	}
-
-	h3 {
-		margin-bottom: 10px;
-		font-size: 1.3rem;
-	}
-
-	p {
-		font-size: 0.9rem;
-		opacity: 0.7;
-		margin-bottom: 20px;
-	}
-
-	.skill-meter {
-		width: 70px;
-		height: 70px;
-		border-radius: 50%;
-		position: relative;
-
-		background: conic-gradient(#00f5ff 0%, transparent 0%);
+		max-width: 700px;
+		margin: auto;
 		display: flex;
-		align-items: center;
-		justify-content: center;
+		flex-direction: column;
+		gap: 25px;
+	}
+
+	.skill {
+		text-align: left;
 
 		span {
-			position: absolute;
-			font-size: 0.9rem;
-			font-weight: 600;
+			display: block;
+			margin-bottom: 8px;
+			font-weight: 500;
+			color: #fff;
+		}
+
+		.progress {
+			width: 100%;
+			height: 10px;
+			border-radius: 10px;
+			overflow: hidden;
+			background: rgba(255, 255, 255, 0.1);
+			backdrop-filter: blur(10px);
+		}
+
+		.progress-bar {
+			height: 100%;
+			width: 0;
+			border-radius: 10px;
+			background: linear-gradient(90deg, #00f5ff, #0047CC);
+			transition: width 1.5s ease;
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: linear-gradient(
+				120deg,
+				transparent,
+				rgba(255, 255, 255, 0.4),
+				transparent
+				);
+				animation: shine 2s infinite;
+			}
 		}
 	}
 }
 
-@keyframes borderMove {
-	0% { background-position: 0% 50%; }
-	100% { background-position: 200% 50%; }
+@keyframes shine {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(100%);
+	}
 }
 
 /* End Barand Area css
@@ -339,25 +334,12 @@
 	padding: 25px 30px;
 	background: $black;
 	text-align: center;
-	position: relative;
 	margin-top: 25px;
 	@media only screen and (max-width: 991px) {
 		margin-top: 50px;
 	}
 	@media (max-width: 575px) {
 		padding-top: 50px;
-	}
-	&:before {
-		content: '';
-		position: absolute;
-		top: -25px;
-		left: -50px;
-		background: url(../img/client-info-bg.png) no-repeat;
-		height: 175px;
-		width: 175px;
-		@media (max-width: 575px) {
-			background: none;
-		}
 	}
 	.d-flex {
 		@media (max-width: 575px) {
@@ -366,11 +348,11 @@
 		}
 	}
 	.lage {
-		color: $primary-color2;
+		color: $primary-color;
 		font-family: $title-font;
-		font-size: 100px;
+		font-size: 170px;
 		font-weight: 700;
-		line-height: 85px;
+		line-height: 1;
 		position: relative;
 		z-index: 9;
 	}
@@ -379,7 +361,9 @@
 		color: $title-color;
 		font-family: $title-font;
 		font-size: 20px;
-		margin-left: 20px;
+	}
+	.l-spc {
+		letter-spacing: 5px;
 	}
 }
 .call-now {

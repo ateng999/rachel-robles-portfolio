@@ -92,6 +92,30 @@
 	/*----------------------------------------------------*/
 	/*  End  glow
 	/*----------------------------------------------------*/
+
+	/*----------------------------------------------------*/
+	/* skills
+	/*----------------------------------------------------*/
+	const skillsSection = document.querySelector(".skills");
+	const progressBars = document.querySelectorAll(".progress-bar");
+
+	const showSkills = () => {
+		const sectionTop = skillsSection.getBoundingClientRect().top;
+		const triggerPoint = window.innerHeight - 100;
+
+		if (sectionTop < triggerPoint) {
+			progressBars.forEach(bar => {
+			const value = bar.getAttribute("data-progress");
+			bar.style.width = value + "%";
+			});
+			window.removeEventListener("scroll", showSkills);
+		}
+	};
+
+	window.addEventListener("scroll", showSkills);
+	/*----------------------------------------------------*/
+	/*  End  skilss
+	/*----------------------------------------------------*/
 	
 	/*----------------------------------------------------*/
 	/* Start Magnific Pop Up
