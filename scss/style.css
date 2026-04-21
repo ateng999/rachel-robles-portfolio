@@ -121,9 +121,9 @@ button:focus {
   }
 }
 .main_title h2 {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 15px;
+  font-size: 60px;
+  font-weight: 300;
+  margin-bottom: 30px;
   line-height: 50px;
   text-transform: uppercase;
 }
@@ -134,7 +134,7 @@ button:focus {
 }
 @media (max-width: 767px) {
   .main_title h2 {
-    font-size: 30px;
+    font-size: 50px;
     line-height: 34px;
   }
 }
@@ -246,8 +246,16 @@ button:focus {
   border-radius: 0px;
   width: 100%;
 }
-.header_area .navbar .navbar-brand {
-  width: 15%;
+@media (min-width: 768px) {
+  .header_area .navbar .navbar-brand {
+    width: 15%;
+  }
+}
+@media (max-width: 767px) {
+  .header_area .navbar .navbar-brand {
+    width: 35%;
+    margin: 0 auto;
+  }
 }
 .header_area .navbar .nav .nav-item {
   margin-right: 45px;
@@ -349,7 +357,9 @@ button:focus {
   top: -70px;
   left: 0;
   right: 0;
-  background: transparent;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
   transform: translateY(70px);
   transition: transform 500ms ease, background 500ms ease;
   -webkit-transition: transform 500ms ease, background 500ms ease;
@@ -357,35 +367,6 @@ button:focus {
 }
 .header_area.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link {
   line-height: 70px;
-}
-@media (min-width: 992px) {
-  .header_area.white_menu .navbar .navbar-brand img {
-    display: none;
-  }
-  .header_area.white_menu .navbar .navbar-brand img + img {
-    display: inline-block;
-  }
-}
-@media (max-width: 991px) {
-  .header_area.white_menu .navbar .navbar-brand img {
-    display: inline-block;
-  }
-  .header_area.white_menu .navbar .navbar-brand img + img {
-    display: none;
-  }
-}
-.header_area.white_menu .navbar .nav .nav-item .nav-link {
-  color: #fff;
-}
-.header_area.white_menu.navbar_fixed .main_menu .navbar .navbar-brand img {
-  display: inline-block;
-}
-.header_area.white_menu.navbar_fixed .main_menu .navbar .navbar-brand img + img {
-  display: none;
-}
-.header_area.white_menu.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link {
-  line-height: 70px;
-  color: #ffffff;
 }
 
 .owl-carousel.off {
@@ -424,7 +405,7 @@ button:focus {
 }
 @media (max-width: 767px) {
   .home_banner_area .banner_inner .banner_content h1 {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 .home_banner_area .banner_inner .banner_content h5 {
@@ -2929,14 +2910,35 @@ h6 {
 /* Start About Us Area css
 ============================================================================================ */
 .about_area {
-  position: relative;
+  background: url(../img/about-us.png) no-repeat bottom right;
   background-color: #000000;
+  background-size: contain;
+}
+@media (min-width: 768px) {
+  .about_area {
+    background-position: right -250px bottom;
+  }
+}
+@media (max-width: 767px) {
+  .about_area {
+    background-position: right -180px top;
+  }
 }
 .about_area .main_title {
   margin-bottom: 0px;
 }
 .about_area .main_title p {
   margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .about_area .main_title p {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 768px) {
+  .about_area .main_title {
+    width: 50%;
+  }
 }
 .about_area .primary_btn {
   margin-top: 20px;
@@ -3026,6 +3028,7 @@ h6 {
 .about_area .about_img {
   position: absolute;
   right: 0;
+  z-index: 1;
 }
 .about_area .about_img img {
   width: 100%;
@@ -3047,16 +3050,80 @@ h6 {
 ============================================================================================ */
 /* Start Barand Area css
 ============================================================================================ */
-.brand_area {
-  padding-bottom: 170px;
+.skills {
+  padding: 100px 20px;
+  text-align: center;
   background-color: #000000;
 }
 @media (max-width: 1199px) {
-  .brand_area {
+  .skills {
     padding-bottom: 80px;
   }
 }
+.skills .section-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 70px;
+  letter-spacing: 1px;
+}
+.skills .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+.skills .skill-card {
+  position: relative;
+  border-radius: 20px;
+  padding: 2px;
+  overflow: hidden;
+  background: linear-gradient(120deg, #00f5ff, #8a2be2, #00f5ff);
+  background-size: 200% 200%;
+  animation: borderMove 6s linear infinite;
+}
+.skills .skill-card .skill-content {
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(18px);
+  border-radius: 18px;
+  padding: 25px;
+  height: 100%;
+  transition: transform 0.4s ease;
+}
+.skills .skill-card:hover .skill-content {
+  transform: translateY(-8px) scale(1.02);
+}
+.skills h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+.skills p {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+.skills .skill-meter {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: relative;
+  background: conic-gradient(#00f5ff 0%, transparent 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skills .skill-meter span {
+  position: absolute;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
 
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
 /* End Barand Area css
 ============================================================================================ */
 /* Start Features Area css
@@ -3593,9 +3660,6 @@ h6 {
     margin-top: 27px;
     margin-bottom: 23px;
   }
-  .header_area .navbar {
-    background: #000;
-  }
   .navbar-toggler[aria-expanded=false] span:nth-child(2) {
     opacity: 1;
   }
@@ -3759,17 +3823,14 @@ h6 {
 @media (max-width: 767px) {
   .home_banner_area {
     min-height: 300px;
+    height: 100vh;
   }
   .home_banner_area .banner_inner {
     min-height: 300px;
-    padding-top: 200px;
-    padding-bottom: 50px;
+    padding: 50px 0;
   }
-  .home_banner_area .banner_inner .banner_content {
-    margin-top: 0px;
-  }
-  .home_banner_area .banner_inner .banner_content .primary_btn {
-    display: none;
+  .home_banner_area .banner_inner .mouse-wrap {
+    bottom: 30px;
   }
   /* Blog Page Area css
   ============================================================================================ */
@@ -3779,17 +3840,6 @@ h6 {
   }
   /* End Blog Page Area css
   ============================================================================================ */
-  .home_banner_area .banner_inner .banner_content h3 {
-    font-size: 30px;
-  }
-  .home_banner_area .banner_inner .banner_content p br {
-    display: none;
-  }
-  .home_banner_area .banner_inner .banner_content h3 span {
-    line-height: 45px;
-    padding-bottom: 0px;
-    padding-top: 0px;
-  }
   /* Footer Area css
   ============================================================================================ */
   .footer_area .f_title {
@@ -3844,11 +3894,8 @@ h6 {
   /* End Home Banner Area css
   ============================================================================================ */
   .section_gap {
-    padding-top: 70px;
+    padding-top: 140px;
     padding-bottom: 70px;
-  }
-  .main_title h2 {
-    font-size: 25px;
   }
   /*Recent Update Area css
   ============================================================================================ */

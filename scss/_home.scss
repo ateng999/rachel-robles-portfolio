@@ -1,12 +1,25 @@
 /* Start About Us Area css
 ============================================================================================ */
 .about_area {
-	position: relative;
+	background: url(../img/about-us.png) no-repeat bottom right;
 	background-color: $black;
+	background-size: contain;
+	@media (min-width: 768px) {
+		background-position: right -250px bottom;
+	}
+	@media (max-width: 767px) {
+		background-position: right -180px top;
+	}
 	.main_title {
 		margin-bottom: 0px;
 		p {
 			margin-bottom: 20px;
+			@media (max-width: 767px) {
+				margin-bottom: 30px;
+			}
+		}
+		@media (min-width: 768px) {
+			width: 50%;
 		}
 	}
 	.primary_btn {
@@ -146,6 +159,7 @@
 	.about_img {
 		position: absolute;
 		right: 0;
+		z-index: 1;
 		img {
 			width: 100%;
 			max-width: 100%;
@@ -166,13 +180,86 @@
 
 /* Start Barand Area css
 ============================================================================================ */
-.brand_area {
-	padding-bottom: 170px;
+.skills {
+	padding: 100px 20px;
+	text-align: center;
 	background-color: $black;
+
 	@media (max-width: 1199px) {
 		padding-bottom: 80px;
 	}
+	.section-title {
+		text-align: center;
+		font-size: 2.8rem;
+		margin-bottom: 70px;
+		letter-spacing: 1px;
+	}
+
+	.skills-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+		gap: 30px;
+	}
+
+	.skill-card {
+		position: relative;
+		border-radius: 20px;
+		padding: 2px;
+		overflow: hidden;
+
+		background: linear-gradient(120deg, #00f5ff, #8a2be2, #00f5ff);
+		background-size: 200% 200%;
+		animation: borderMove 6s linear infinite;
+
+		.skill-content {
+			background: rgba(10, 10, 10, 0.75);
+			backdrop-filter: blur(18px);
+			border-radius: 18px;
+			padding: 25px;
+			height: 100%;
+			transition: transform 0.4s ease;
+		}
+
+		&:hover .skill-content {
+			transform: translateY(-8px) scale(1.02);
+		}
+	}
+
+	h3 {
+		margin-bottom: 10px;
+		font-size: 1.3rem;
+	}
+
+	p {
+		font-size: 0.9rem;
+		opacity: 0.7;
+		margin-bottom: 20px;
+	}
+
+	.skill-meter {
+		width: 70px;
+		height: 70px;
+		border-radius: 50%;
+		position: relative;
+
+		background: conic-gradient(#00f5ff 0%, transparent 0%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		span {
+			position: absolute;
+			font-size: 0.9rem;
+			font-weight: 600;
+		}
+	}
 }
+
+@keyframes borderMove {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 200% 50%; }
+}
+
 /* End Barand Area css
 ============================================================================================ */
 

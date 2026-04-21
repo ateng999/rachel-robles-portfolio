@@ -13,7 +13,13 @@
         border-radius: 0px;
         width: 100%;
         .navbar-brand {
-            width: 15%;
+             @media (min-width: 768px) {
+                width: 15%;
+            }
+            @media (max-width: 767px) {
+                width: 35%;
+                margin: 0 auto;
+            }
         }
         .nav {
             .nav-item {
@@ -125,7 +131,9 @@
             top: -70px;
             left: 0;
             right: 0;
-            background: transparent;
+            opacity: 1;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(15px);
             transform: translateY(70px);
             transition: transform 500ms ease, background 500ms ease;
             -webkit-transition: transform 500ms ease, background 500ms ease;
@@ -135,57 +143,6 @@
                     .nav-item {
                         .nav-link {
                             line-height: 70px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    &.white_menu {
-        .navbar {
-            .navbar-brand {
-                @media(min-width: 992px) {
-                    img {
-                        display: none;
-                        &+img {
-                            display: inline-block;
-                        }
-                    }
-                }
-                @media(max-width: 991px) {
-                    img {
-                        display: inline-block;
-                        &+img {
-                            display: none;
-                        }
-                    }
-                }
-            }
-            .nav {
-                .nav-item {
-                    .nav-link {
-                        color: #fff;
-                    }
-                }
-            }
-        }
-        &.navbar_fixed {
-            .main_menu {
-                .navbar {
-                    .navbar-brand {
-                        img {
-                            display: inline-block;
-                            &+img {
-                                display: none;
-                            }
-                        }
-                    }
-                    .nav {
-                        .nav-item {
-                            .nav-link {
-                                line-height: 70px;
-                                color: $title-color;
-                            }
                         }
                     }
                 }
