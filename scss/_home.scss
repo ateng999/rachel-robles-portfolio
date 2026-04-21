@@ -254,6 +254,41 @@
 		transform: translateX(100%);
 	}
 }
+.cyber-grid-container {
+	position: relative;
+	width: 100%;
+	height: 400px; // Adjust based on your section height
+	background-color: $black;
+	overflow: hidden;
+	perspective: 450px; // This creates the 3D depth
+
+	.grid-floor {
+		position: absolute;
+		top: 0;
+		left: -50%;
+		width: 200%; // Wider than container to cover edges when rotated
+		height: 100%;
+		background-image: 
+		linear-gradient(to right, rgba($primary-color, 0.3) 1px, transparent 1px),
+		linear-gradient(to bottom, rgba($primary-color, 0.3) 1px, transparent 1px);
+		background-size: $grid-size $grid-size;
+		
+		// Tilt the floor back
+		transform: rotateX(45deg);
+		transform-origin: top center;
+		
+		// Optional: Add a fade-to-black effect toward the horizon
+		mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 80%);
+		
+		&::after {
+		content: '';
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			// Adds a subtle glow to the lines
+			box-shadow: inset 0 0 100px $black;
+		}
+	}
+}
 
 /* End Barand Area css
 ============================================================================================ */
@@ -479,8 +514,6 @@
 			left: 50%;
 		}
 	}
-}
-.portfolio_details_area {
 }
 
 .portfolio_details_inner {

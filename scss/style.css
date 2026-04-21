@@ -3114,6 +3114,37 @@ h6 {
     transform: translateX(100%);
   }
 }
+.cyber-grid-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: #000000;
+  overflow: hidden;
+  perspective: 450px;
+}
+.cyber-grid-container .grid-floor {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgba(0, 245, 255, 0.3) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 245, 255, 0.3) 1px, transparent 1px);
+  background-size: 50px 50px;
+  transform: rotateX(45deg);
+  transform-origin: top center;
+  -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%);
+          mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%);
+}
+.cyber-grid-container .grid-floor::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 100px #000000;
+}
+
 /* End Barand Area css
 ============================================================================================ */
 /* Start Features Area css
