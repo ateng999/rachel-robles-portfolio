@@ -431,6 +431,7 @@
 ============================================================================================ */
 .portfolio_area {
 	padding-bottom: 120px;
+	background-color: $black;
 	@media (max-width: 991px) {
 		padding-bottom: 50px;
 	}
@@ -568,6 +569,7 @@
 /* Start Testimonial Area css
 ============================================================================================ */
 .testimonial_area {
+	background-color: $black;
 	.owl-carousel {
 		.owl-dots {
 			display: block !important;
@@ -640,6 +642,7 @@
 /* Start Newsletter Area css
 ============================================================================================ */
 .newsletter_area {
+	background-color: #000;
 	color: #ffffff;
 }
 

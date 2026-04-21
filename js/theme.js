@@ -2,24 +2,70 @@
 	'use strict';
 
 	var nav_offset_top = $('header').height() + 50;
-	/*-------------------------------------------------------------------------------
-	  Navbar 
-	-------------------------------------------------------------------------------*/
 
-	//* Navbar Fixed
+	/*-------------------------------------------------------------------------------
+	Navbar Fixed
+	-------------------------------------------------------------------------------*/
+	
 	function navbarFixed() {
-		if ($('.header_area').length) {
-			$(window).scroll(function() {
-				var scroll = $(window).scrollTop();
-				if (scroll >= nav_offset_top) {
-					$('.header_area').addClass('navbar_fixed');
-				} else {
-					$('.header_area').removeClass('navbar_fixed');
-				}
-			});
+	if ($('.header_area').length) {
+		$(window).on('scroll', function () {
+		var scroll = $(window).scrollTop();
+
+		if (scroll >= nav_offset_top) {
+			$('.header_area').addClass('navbar_fixed');
+		} else {
+			$('.header_area').removeClass('navbar_fixed');
 		}
+		});
+	}
 	}
 	navbarFixed();
+
+
+	/*-------------------------------------------------------------------------------
+	Active Nav Link on Scroll (ScrollSpy)
+	-------------------------------------------------------------------------------*/
+	function navActiveOnScroll() {
+	var sections = $('section');
+	var navLinks = $('.menu_nav .nav-link');
+
+	$(window).on('scroll', function () {
+		var currentPos = $(this).scrollTop() + nav_offset_top + 50;
+
+		sections.each(function () {
+		var top = $(this).offset().top;
+		var bottom = top + $(this).outerHeight();
+		var id = $(this).attr('id');
+
+		if (currentPos >= top && currentPos <= bottom) {
+			navLinks.removeClass('active');
+
+			$('.menu_nav .nav-link[href="#' + id + '"]').addClass('active');
+		}
+		});
+	});
+	}
+	navActiveOnScroll();
+
+
+	/*-------------------------------------------------------------------------------
+	Smooth Scroll
+	-------------------------------------------------------------------------------*/
+	$('.menu_nav .nav-link').on('click', function (e) {
+	var target = $(this.getAttribute('href'));
+
+	if (target.length) {
+		e.preventDefault();
+
+		$('html, body').stop().animate({
+		scrollTop: target.offset().top - nav_offset_top
+		}, 700);
+
+		$('.menu_nav .nav-link').removeClass('active');
+		$(this).addClass('active');
+	}
+	});
 
 	/*----------------------------------------------------*/
 	/*  MailChimp Slider

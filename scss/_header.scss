@@ -25,14 +25,37 @@
             .nav-item {
                 margin-right: 45px;
                 .nav-link {
+                    position: relative;
                     font: 300 16px/100px $title-font;
                     text-transform: uppercase;
                     color: $title-color;
                     padding: 0px;
                     display: inline-block;
-                    &:after {
-                        display: none;
+                    transition: color 0.3s ease;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 25px;
+                        width: 0%;
+                        height: 2px;
+                        background: $title-color;
+                        transition: width 0.3s ease;
+                        box-shadow: 0 0 8px $title-color;
                     }
+                    &:hover::after {
+                        width: 100%;
+                    }
+
+                    &.active {
+                        color: $title-color !important;
+
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+
                 }
                 &:hover,
                 &.active {

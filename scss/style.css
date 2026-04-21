@@ -261,14 +261,33 @@ button:focus {
   margin-right: 45px;
 }
 .header_area .navbar .nav .nav-item .nav-link {
+  position: relative;
   font: 300 16px/100px "Oswald", sans-serif;
   text-transform: uppercase;
   color: #ffffff;
   padding: 0px;
   display: inline-block;
+  transition: color 0.3s ease;
 }
-.header_area .navbar .nav .nav-item .nav-link:after {
-  display: none;
+.header_area .navbar .nav .nav-item .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 25px;
+  width: 0%;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 8px #ffffff;
+}
+.header_area .navbar .nav .nav-item .nav-link:hover::after {
+  width: 100%;
+}
+.header_area .navbar .nav .nav-item .nav-link.active {
+  color: #ffffff !important;
+}
+.header_area .navbar .nav .nav-item .nav-link.active::after {
+  width: 100%;
 }
 .header_area .navbar .nav .nav-item:hover .nav-link, .header_area .navbar .nav .nav-item.active .nav-link {
   color: #00f5ff;
@@ -3306,6 +3325,7 @@ h6 {
 ============================================================================================ */
 .portfolio_area {
   padding-bottom: 120px;
+  background-color: #000000;
 }
 @media (max-width: 991px) {
   .portfolio_area {
@@ -3449,6 +3469,9 @@ h6 {
 ============================================================================================ */
 /* Start Testimonial Area css
 ============================================================================================ */
+.testimonial_area {
+  background-color: #000000;
+}
 .testimonial_area .owl-carousel .owl-dots {
   display: block !important;
   text-align: center;
@@ -3523,6 +3546,7 @@ h6 {
 /* Start Newsletter Area css
 ============================================================================================ */
 .newsletter_area {
+  background-color: #000;
   color: #ffffff;
 }
 
@@ -3996,7 +4020,7 @@ h6 {
 /* Footer Area css
 ============================================================================================ */
 .blog_version .footer_area {
-  background: #f9f9fd;
+  background: #000000;
 }
 .blog_version .footer_area:before {
   content: none;
@@ -4013,7 +4037,7 @@ h6 {
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background: #f9f9fd;
+  background: #000000;
   z-index: -1;
 }
 @media (max-width: 1024px) {

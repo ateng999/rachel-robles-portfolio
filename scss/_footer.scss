@@ -2,7 +2,7 @@
 ============================================================================================ */
 .blog_version {
 	.footer_area {
-		background: #f9f9fd;
+		background: $black;
 		&:before {
 			content: none;
 		}
@@ -18,7 +18,7 @@
 		left: 0px;
 		right: 0px;
 		bottom: 0px;
-		background: #f9f9fd;
+		background: $black;
 		z-index: -1;
 	}
 	@media (max-width: 1024px) {
