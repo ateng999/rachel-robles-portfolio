@@ -3168,40 +3168,84 @@ h6 {
 ============================================================================================ */
 /* Start Features Area css
 ============================================================================================ */
-.features_area {
-  padding-bottom: 170px;
+.services_area {
+  padding: 120px 0;
   background: #000000;
+  color: #fff;
 }
-@media (max-width: 1199px) {
-  .features_area {
-    padding-bottom: 50px;
+.services_area .section_title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.services_area .section_title h2 {
+  font-size: 36px;
+  font-weight: 600;
+}
+.services_area .section_title p {
+  opacity: 0.7;
+}
+.services_area .services_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+@media (max-width: 992px) {
+  .services_area .services_grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-
-.feature_item {
-  display: flex;
-  flex-direction: column;
-  padding: 45px 25px;
-  text-align: center;
-  margin-bottom: 30px;
+@media (max-width: 576px) {
+  .services_area .services_grid {
+    grid-template-columns: 1fr;
+  }
+}
+.services_area .services_grid .service_card {
+  position: relative;
+  padding: 1px;
   border-radius: 20px;
-  transition: all 0.4s ease 0s;
+  overflow: hidden;
+  background: linear-gradient(120deg, transparent, #ffffff, transparent);
+  background-size: 200% 200%;
+  animation: borderMove 4s linear infinite;
 }
-.feature_item img {
-  margin-bottom: 35px;
+.services_area .services_grid .service_card .card_inner {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  height: 100%;
+  transition: all 0.3s ease;
 }
-.feature_item h4 {
+.services_area .services_grid .service_card .card_inner .card_img img {
+  width: 45%;
+}
+.services_area .services_grid .service_card .card_inner h3 {
+  margin: 15px 0;
   font-size: 20px;
+}
+.services_area .services_grid .service_card .card_inner p {
+  font-size: 14px;
+  opacity: 0.7;
   margin-bottom: 20px;
-  text-transform: uppercase;
 }
-.feature_item p {
-  margin-bottom: 0px;
+.services_area .services_grid .service_card .card_inner .tag {
+  font-size: 12px;
+  color: #00f5ff;
+  opacity: 0.8;
 }
-.feature_item:hover {
-  box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.3);
+.services_area .services_grid .service_card:hover .card_inner {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.2);
 }
 
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
 /* End Features Area css
 ============================================================================================ */
 /* Start Brand Area css

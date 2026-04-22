@@ -162,7 +162,60 @@
 	/*----------------------------------------------------*/
 	/*  End  skilss
 	/*----------------------------------------------------*/
-	
+	function revealServices() {
+		const cards = document.querySelectorAll('.service_card');
+
+		const observer = new IntersectionObserver(entries => {
+			entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.style.opacity = 1;
+				entry.target.style.transform = 'translateY(0)';
+			}
+			});
+		}, { threshold: 0.2 });
+
+		cards.forEach(card => {
+			card.style.opacity = 0;
+			card.style.transform = 'translateY(40px)';
+			card.style.transition = 'all 0.6s ease';
+			observer.observe(card);
+		});
+		}
+
+		revealServices();
+
+	function initGlassReflection() {
+		const cards = document.querySelectorAll('.service_card');
+
+		cards.forEach(card => {
+			const inner = card.querySelector('.card_inner');
+
+			card.addEventListener('mousemove', (e) => {
+			const rect = card.getBoundingClientRect();
+
+			const x = ((e.clientX - rect.left) / rect.width) * 100;
+			const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+			inner.style.setProperty('--x', `${x}%`);
+			inner.style.setProperty('--y', `${y}%`);
+
+			inner.style.setProperty(
+				'background',
+				`
+				radial-gradient(circle at var(--x) var(--y),
+				rgba(0,245,255,0.15),
+				rgba(10,10,10,0.9) 60%)
+				`
+			);
+			});
+
+			card.addEventListener('mouseleave', () => {
+			inner.style.background = 'rgba(10,10,10,0.85)';
+			});
+		});
+	}
+
+	initGlassReflection();
 	/*----------------------------------------------------*/
 	/* Start Magnific Pop Up
 	/*----------------------------------------------------*/
