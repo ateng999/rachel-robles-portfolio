@@ -11,9 +11,9 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="vendors/linericon/style.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/magnific-popup.css">
 	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
 	<!-- main css -->
 	<link rel="stylesheet" href="scss/style.css">
 </head>
@@ -34,7 +34,7 @@
 					</button>
 					<div class="collapse navbar-collapse offset navmenu" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav justify-content-end">
-							<li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+							<li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
 							<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
 							<li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
 							<li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
@@ -48,7 +48,7 @@
 	<!--================ End Header Area =================-->
 
 	<!--================ Start Home Banner Area =================-->
-	<section class="home_banner_area d-flex align-items-center justify-content-center">
+	<section class="home_banner_area d-flex align-items-center justify-content-center" id="home">
 		<div class="banner_inner">
 			<div class="container">
 				<div class="banner_content d-flex flex-column align-items-center justify-content-center">
@@ -153,56 +153,73 @@
 				<p>Crafting high-performance, visually striking web experiences.</p>
 			</div>
 
-			<div class="services_grid">
+			<div class="swiper services-slider">
+				<div class="swiper-wrapper">
 
-				<div class="service_card">
-					<div class="card_inner">
-						<div class="card_img d-flex justify-content-center flex-column align-items-center">
-							<img src="img/services/s1.svg" alt="">
-							<img src="img/services/s1.png" alt="">
+					<div class="service_card swiper-slide">
+						<div class="card_inner">
+							<div class="card_img d-flex justify-content-center flex-column align-items-center">
+								<!-- <img src="img/services/s1.svg" alt=""> -->
+								<img src="img/services/s1.png" alt="">
+							</div>
+							<h3>Front-End Development</h3>
+							<p>Pixel-perfect, responsive UI using modern frameworks with performance-first architecture.</p>
+							<span class="tag">Responsive • SCSS • Performance</span>
 						</div>
-						<h3>Frontend Development</h3>
-						<p>Pixel-perfect, responsive UI using modern frameworks with performance-first architecture.</p>
-						<span class="tag">React • SCSS • Performance</span>
 					</div>
-				</div>
 
-				<div class="service_card">
-					<div class="card_inner">
-						<div class="card_img d-flex justify-content-center flex-column align-items-center">
-							<img src="img/services/s2.svg" alt="">
-							<img src="img/services/s2.png" alt="">
+					<div class="service_card swiper-slide">
+						<div class="card_inner">
+							<div class="card_img d-flex justify-content-center flex-column align-items-center">
+								<!-- <img src="img/services/s2.svg" alt=""> -->
+								<img src="img/services/s2.png" alt="">
+							</div>
+							<h3>UI/UX Engineering</h3>
+							<p>Interactive, smooth, and engaging interfaces with animation and micro-interactions.</p>
+							<span class="tag">Animations • UX • Accessibility</span>
 						</div>
-						<h3>UI/UX Engineering</h3>
-						<p>Interactive, smooth, and engaging interfaces with animation and micro-interactions.</p>
-						<span class="tag">Animations • UX • Accessibility</span>
 					</div>
-				</div>
 
-				<div class="service_card">
-					<div class="card_inner">
-						<div class="card_img d-flex justify-content-center flex-column align-items-center">
-							<img src="img/services/s4.svg" alt="">
-							<img src="img/services/s3.png" alt="">
+					<div class="service_card swiper-slide">
+						<div class="card_inner">
+							<div class="card_img d-flex justify-content-center flex-column align-items-center">
+								<!-- <img src="img/services/s3.svg" alt=""> -->
+								<img src="img/services/s3.png" alt="">
+							</div>
+							<h3>SEO Optimization</h3>
+							<p>Technical SEO, Core Web Vitals, and structured data for better rankings and visibility.</p>
+							<span class="tag">LCP • CLS • Indexing</span>
 						</div>
-						<h3>SEO Optimization</h3>
-						<p>Technical SEO, Core Web Vitals, and structured data for better rankings and visibility.</p>
-						<span class="tag">LCP • CLS • Indexing</span>
 					</div>
-				</div>
 
-				<div class="service_card">
-					<div class="card_inner">
-						<div class="card_img d-flex justify-content-center flex-column align-items-center">
-							<img src="img/services/s3.svg" alt="">
-							<img src="img/services/s4.png" alt="">
+					<div class="service_card swiper-slide">
+						<div class="card_inner">
+							<div class="card_img d-flex justify-content-center flex-column align-items-center">
+								<!-- <img src="img/services/s4.svg" alt=""> -->
+								<img src="img/services/s4.png" alt="">
+							</div>
+							<h3>Quality Assurance</h3>
+							<p>End-to-end testing focused on performance, usability, and stability across browsers, devices, and environments.</p>
+							<span class="tag">QA • Debugging • Compatibility</span>
 						</div>
-						<h3>Performance Tuning</h3>
-						<p>Optimizing load times, reducing JS bloat, and improving PageSpeed scores.</p>
-						<span class="tag">Lazy Load • Code Split</span>
 					</div>
-				</div>
 
+					<div class="service_card swiper-slide">
+						<div class="card_inner">
+							<div class="card_img d-flex justify-content-center flex-column align-items-center">
+								<!-- <img src="img/services/s5.svg" alt=""> -->
+								<img src="img/services/s5.png" alt="">
+							</div>
+							<h3>Creative & Visual</h3>
+							<p>Supporting digital experiences with strong visual direction, packaging design, and video content.</p>
+							<span class="tag">Branding • Packaging • Video</span>
+						</div>
+					</div>
+
+				</div>
+				<div class="swiper-pagination"></div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
 			</div>
 		</div>
 	</section>
@@ -523,7 +540,7 @@
 					<div class="footer_top flex-column">
 						<div class="footer_logo">
 							<a href="#">
-								<img src="img/logo.png" alt="">
+								<img src="img/logo.svg" alt="">
 							</a>
 							<h4>Follow Me</h4>
 						</div>
@@ -548,12 +565,13 @@
 	<script src="vendors/typed.js/typed.umd.js"></script>
 	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
 	<script src="vendors/isotope/isotope-min.js"></script>
-	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 	<script src="js/jquery.ajaxchimp.min.js"></script>
 	<script src="js/mail-script.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="js/gmaps.min.js"></script>
 	<script src="js/theme.js"></script>
+	<script src="js/swipeslide.js"></script>
 </body>
 
 </html>

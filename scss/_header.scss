@@ -13,7 +13,7 @@
         border-radius: 0px;
         width: 100%;
         .navbar-brand {
-             @media (min-width: 768px) {
+            @media (min-width: 768px) {
                 width: 15%;
             }
             @media (max-width: 767px) {
@@ -37,19 +37,19 @@
                         content: "";
                         position: absolute;
                         left: 0;
-                        bottom: 25px;
+                        bottom: 38px;
                         width: 0%;
                         height: 2px;
-                        background: $title-color;
+                        background: $primary-color;
                         transition: width 0.3s ease;
-                        box-shadow: 0 0 8px $title-color;
+                        box-shadow: 0 0 8px $primary-color;
                     }
                     &:hover::after {
                         width: 100%;
                     }
 
                     &.active {
-                        color: $title-color !important;
+                        color: $primary-color;
 
                         &::after {
                             width: 100%;
@@ -57,8 +57,7 @@
                     }
 
                 }
-                &:hover,
-                &.active {
+                &:hover {
                     .nav-link {
                         color: $primary-color;
                     }
@@ -166,6 +165,10 @@
                     .nav-item {
                         .nav-link {
                             line-height: 70px;
+                            &::after {
+                                content: "";
+                                bottom: 25px;
+                            }
                         }
                     }
                 }
