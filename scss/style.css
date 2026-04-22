@@ -3084,11 +3084,89 @@ h6 {
     padding-bottom: 80px;
   }
 }
+@media (max-width: 767px) {
+  .skills {
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .skills .row {
+    display: block;
+  }
+  .skills .row .col-md-6 {
+    max-width: 100%;
+  }
+}
 .skills .section-title {
   font-size: 2.5rem;
   margin-bottom: 50px;
   color: #fff;
   text-align: left;
+}
+.skills .client-info {
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .skills .client-info {
+    margin: 0;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .skills .client-info .pjcts {
+    justify-content: flex-end;
+  }
+}
+.skills .client-info .lage {
+  color: #00f5ff;
+  font-family: "Oswald", sans-serif;
+  font-size: 150px;
+  font-weight: 700;
+  line-height: 1;
+  position: relative;
+  z-index: 9;
+}
+@media (max-width: 515px) {
+  .skills .client-info .lage {
+    font-size: 110px;
+  }
+}
+.skills .client-info .smll,
+.skills .client-info .l-spc {
+  text-align: left;
+  color: #ffffff;
+  font-family: "Oswald", sans-serif;
+}
+.skills .client-info .l-spc {
+  font-size: 30px;
+  letter-spacing: 12px;
+}
+@media (max-width: 515px) {
+  .skills .client-info .l-spc {
+    font-size: 16px;
+  }
+}
+.skills .client-info .smll {
+  font-size: 20px;
+  width: 50%;
+  margin: 30px 0 0 20px;
+}
+@media (max-width: 515px) {
+  .skills .client-info .smll {
+    width: 100%;
+    font-size: 14px;
+    margin: 0 0 0 10px;
+  }
+}
+.skills .client-info .pjcts .lage {
+  font-size: 120px;
+  font-weight: 700;
+  margin-right: 0;
+}
+@media (max-width: 515px) {
+  .skills .client-info .pjcts .lage {
+    font-size: 76px;
+  }
 }
 .skills .skills-grid {
   max-width: 700px;
@@ -3195,6 +3273,11 @@ h6 {
   margin: auto;
   overflow: hidden;
 }
+@media (max-width: 767px) {
+  .services_area .services-slider {
+    padding: 50px 50px;
+  }
+}
 .services_area .services-slider .swiper-slide {
   display: flex;
   justify-content: center;
@@ -3221,6 +3304,12 @@ h6 {
 .services_area .services-slider .swiper-button-prev {
   transform: scale(0.92);
   color: #00f5ff;
+}
+@media (max-width: 767px) {
+  .services_area .services-slider .swiper-button-next,
+  .services_area .services-slider .swiper-button-prev {
+    display: none;
+  }
 }
 .services_area .services-slider .swiper-pagination {
   margin-top: 40px;
@@ -3292,123 +3381,6 @@ h6 {
   }
 }
 /* End Features Area css
-============================================================================================ */
-/* Start Brand Area css
-============================================================================================ */
-.single-brand-item {
-  width: 170px;
-  height: 100px;
-  cursor: pointer;
-  margin-bottom: 30px;
-  border: 1px solid #eeeeee;
-  box-shadow: none;
-  transition: all 0.4s ease 0s;
-}
-@media only screen and (max-width: 767px) {
-  .single-brand-item {
-    height: 100px;
-    width: 140px;
-  }
-}
-@media (max-width: 575px) {
-  .single-brand-item {
-    margin: 0px auto;
-    margin-bottom: 30px;
-  }
-}
-.single-brand-item .d-table-cell {
-  vertical-align: middle;
-}
-.single-brand-item img {
-  max-width: 80px;
-  margin: 0 auto;
-  transition: all 0.4s ease 0s;
-}
-@media only screen and (max-width: 767px) {
-  .single-brand-item img {
-    max-width: 100px;
-  }
-}
-.single-brand-item:hover {
-  border: 1px solid transparent;
-  box-shadow: 0px 8px 30px rgba(118, 85, 225, 0.15);
-}
-.single-brand-item:hover img {
-  filter: brightness(0%);
-  -o-filter: brightness(0%);
-  -ms-filter: brightness(0%);
-  -moz-filter: brightness(0%);
-  -webkit-filter: brightness(0%);
-}
-
-.client-info {
-  padding: 25px 30px;
-  background: #000000;
-  text-align: center;
-  margin-top: 25px;
-}
-@media only screen and (max-width: 991px) {
-  .client-info {
-    margin-top: 50px;
-  }
-}
-@media (max-width: 575px) {
-  .client-info {
-    padding-top: 50px;
-  }
-}
-@media (max-width: 575px) {
-  .client-info .d-flex {
-    align-items: center;
-  }
-}
-.client-info .lage {
-  color: #00f5ff;
-  font-family: "Oswald", sans-serif;
-  font-size: 170px;
-  font-weight: 700;
-  line-height: 1;
-  position: relative;
-  z-index: 9;
-}
-.client-info .smll {
-  text-align: left;
-  color: #ffffff;
-  font-family: "Oswald", sans-serif;
-  font-size: 20px;
-}
-.client-info .l-spc {
-  letter-spacing: 5px;
-}
-
-.call-now {
-  padding-top: 50px;
-  text-align: left;
-  margin-bottom: 40px;
-}
-@media (max-width: 575px) {
-  .call-now {
-    padding-top: 0px;
-  }
-}
-@media (max-width: 480px) {
-  .call-now h3 {
-    font-size: 17px;
-  }
-}
-.call-now p {
-  color: #0047CC;
-  font-size: 16px;
-  text-transform: uppercase;
-  margin-bottom: 5px;
-}
-.call-now span {
-  font-size: 60px;
-  font-weight: 700;
-  color: #ffffff;
-}
-
-/* End Brand Area css
 ============================================================================================ */
 /* Start Portfolio Area css
 ============================================================================================ */
