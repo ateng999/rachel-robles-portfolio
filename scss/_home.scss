@@ -399,14 +399,12 @@
 			display: flex;
 			transition: all 0.5s ease;
 			opacity: 0.4;
-			filter: blur(1px);
 			transform: scale(0.85);
 			pointer-events: none;
 		}
 
 		.swiper-slide-active {
 			opacity: 1;
-			filter: blur(0);
 			transform: scale(1.05);
 			z-index: 2;
 
@@ -712,19 +710,51 @@
 		border-radius: 18px;
 		padding: 20px;
 		position: relative;
+		max-height: 90vh;
+		display: flex;
+		flex-direction: column;
 
 		transform: translateY(40px) scale(0.96);
 		transition: .4s;
 
 		iframe {
-		width: 100%;
-		height: 600px;
-		border-radius: 10px;
+			width: 100%;
+			height: 600px;
+			border-radius: 10px;
 		}
 
-		img {
-		width: 100%;
-		border-radius: 10px;
+		.modal_body {
+			overflow-y: auto;
+			flex: 1;
+
+			img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+			iframe {
+				width: 100%;
+				height: 80vh;
+			}
+			&::-webkit-scrollbar-track
+			{
+				-webkit-box-shadow: inset 0 0 6px rgba(173, 173, 173, 0.3);
+				border-radius: 20px;
+				background-color: rgba(255, 255, 255, 0.096);
+			}
+
+			&::-webkit-scrollbar
+			{
+				width: 7px;
+				background-color: rgba(255, 255, 255, 0.342);
+			}
+
+			&::-webkit-scrollbar-thumb
+			{
+				-webkit-box-shadow: inset 0 0 6px rgba(173, 173, 173, 0.3);
+				border-radius: 20px;
+				background-color: rgba(255, 255, 255, 0.096);
+			}
 		}
 	}
 
@@ -734,11 +764,15 @@
 
 	.close {
 		position: absolute;
-		top: 15px;
-		right: 20px;
-		font-size: 22px;
+		top: 1px;
+		right: 10px;
+		font-size: 20px;
 		color: #fff;
 		cursor: pointer;
+		&:active,
+		&:hover {
+			color: #fff !important;
+		}
 	}
 }
 /* End Portfolio Area css
@@ -815,88 +849,4 @@
 	}
 }
 /* End Testimonial Area css
-============================================================================================ */
-
-/* Start Newsletter Area css
-============================================================================================ */
-.newsletter_area {
-	background-color: #000;
-	color: #ffffff;
-}
-
-.subscription_box {
-	background: url(../img/subscribe-bg.png) no-repeat center;
-	padding: 150px 0px;
-	@media (max-width: 767px) {
-		padding: 50px 20px;
-	}
-	h2 {
-		font-weight: 700;
-		margin-bottom: 20px;
-		@media (max-width: 767px) {
-			font-size: 30px;
-		}
-	}
-	p {
-		margin-bottom: 0;
-	}
-	.subscription {
-		input {
-			min-width: 380px;
-			max-width: 380px;
-			line-height: 48px;
-			padding: 0 25px;
-			border: 1px solid #ffffff;
-			background: transparent;
-			font-weight: 400;
-			border-radius: 5px;
-			color: #ffffff;
-			&:focus {
-				outline: none;
-			}
-			@media (max-width: 420px) {
-				min-width: 250px;
-			}
-			@include placeholder {
-				color: #ffffff;
-				font-weight: 400;
-			}
-		}
-	}
-	.primary-btn {
-		margin-left: 10px;
-		background: #ffffff;
-		text-transform: uppercase;
-		color: #222222;
-		border-radius: 5px;
-		line-height: 48px;
-		font-size: 14px;
-		font-family: $title-font;
-		padding: 0px 38px;
-		cursor: pointer;
-		@media (max-width: 767px) {
-			margin-top: 20px;
-		}
-	}
-	.subcribe-form {
-		margin-top: 45px;
-	}
-}
-
-.subscription .info {
-	color: #fff;
-	width: 100%;
-	font-size: 12px;
-	background: transparent;
-}
-
-.subscription .info.valid {
-	color: green;
-}
-
-.subscription .info.error {
-	color: red;
-}
-
-/* End Newsletter Area css
 ============================================================================================ */

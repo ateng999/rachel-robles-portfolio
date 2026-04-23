@@ -261,7 +261,7 @@
 				'background',
 				`
 				radial-gradient(circle at var(--x) var(--y),
-				rgba(0,245,255,0.15),
+				rgba(0, 247, 255, 0.07),
 				rgba(10,10,10,0.9) 60%)
 				`
 			);

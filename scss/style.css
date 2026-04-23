@@ -2463,13 +2463,11 @@ h6 {
   display: flex;
   transition: all 0.5s ease;
   opacity: 0.4;
-  filter: blur(1px);
   transform: scale(0.85);
   pointer-events: none;
 }
 .services_area .services-slider .swiper-slide-active {
   opacity: 1;
-  filter: blur(0);
   transform: scale(1.05);
   z-index: 2;
 }
@@ -2737,6 +2735,9 @@ h6 {
   border-radius: 18px;
   padding: 20px;
   position: relative;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
   transform: translateY(40px) scale(0.96);
   transition: 0.4s;
 }
@@ -2745,20 +2746,46 @@ h6 {
   height: 600px;
   border-radius: 10px;
 }
-.portfolio_modal .modal_content img {
+.portfolio_modal .modal_content .modal_body {
+  overflow-y: auto;
+  flex: 1;
+}
+.portfolio_modal .modal_content .modal_body img {
   width: 100%;
-  border-radius: 10px;
+  height: auto;
+  display: block;
+}
+.portfolio_modal .modal_content .modal_body iframe {
+  width: 100%;
+  height: 80vh;
+}
+.portfolio_modal .modal_content .modal_body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(173, 173, 173, 0.3);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.096);
+}
+.portfolio_modal .modal_content .modal_body::-webkit-scrollbar {
+  width: 7px;
+  background-color: rgba(255, 255, 255, 0.342);
+}
+.portfolio_modal .modal_content .modal_body::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(173, 173, 173, 0.3);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.096);
 }
 .portfolio_modal.active .modal_content {
   transform: translateY(0) scale(1);
 }
 .portfolio_modal .close {
   position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 22px;
+  top: 1px;
+  right: 10px;
+  font-size: 20px;
   color: #fff;
   cursor: pointer;
+}
+.portfolio_modal .close:active, .portfolio_modal .close:hover {
+  color: #fff !important;
 }
 
 /* End Portfolio Area css
@@ -2838,107 +2865,6 @@ h6 {
 }
 
 /* End Testimonial Area css
-============================================================================================ */
-/* Start Newsletter Area css
-============================================================================================ */
-.newsletter_area {
-  background-color: #000;
-  color: #ffffff;
-}
-
-.subscription_box {
-  background: url(../img/subscribe-bg.png) no-repeat center;
-  padding: 150px 0px;
-}
-@media (max-width: 767px) {
-  .subscription_box {
-    padding: 50px 20px;
-  }
-}
-.subscription_box h2 {
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-@media (max-width: 767px) {
-  .subscription_box h2 {
-    font-size: 30px;
-  }
-}
-.subscription_box p {
-  margin-bottom: 0;
-}
-.subscription_box .subscription input {
-  min-width: 380px;
-  max-width: 380px;
-  line-height: 48px;
-  padding: 0 25px;
-  border: 1px solid #ffffff;
-  background: transparent;
-  font-weight: 400;
-  border-radius: 5px;
-  color: #ffffff;
-}
-.subscription_box .subscription input:focus {
-  outline: none;
-}
-@media (max-width: 420px) {
-  .subscription_box .subscription input {
-    min-width: 250px;
-  }
-}
-.subscription_box .subscription input.placeholder {
-  color: #ffffff;
-  font-weight: 400;
-}
-.subscription_box .subscription input:-moz-placeholder {
-  color: #ffffff;
-  font-weight: 400;
-}
-.subscription_box .subscription input::-moz-placeholder {
-  color: #ffffff;
-  font-weight: 400;
-}
-.subscription_box .subscription input::-webkit-input-placeholder {
-  color: #ffffff;
-  font-weight: 400;
-}
-.subscription_box .primary-btn {
-  margin-left: 10px;
-  background: #ffffff;
-  text-transform: uppercase;
-  color: #222222;
-  border-radius: 5px;
-  line-height: 48px;
-  font-size: 14px;
-  font-family: "Oswald", sans-serif;
-  padding: 0px 38px;
-  cursor: pointer;
-}
-@media (max-width: 767px) {
-  .subscription_box .primary-btn {
-    margin-top: 20px;
-  }
-}
-.subscription_box .subcribe-form {
-  margin-top: 45px;
-}
-
-.subscription .info {
-  color: #fff;
-  width: 100%;
-  font-size: 12px;
-  background: transparent;
-}
-
-.subscription .info.valid {
-  color: green;
-}
-
-.subscription .info.error {
-  color: red;
-}
-
-/* End Newsletter Area css
 ============================================================================================ */
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
