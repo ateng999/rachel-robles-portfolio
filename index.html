@@ -36,6 +36,7 @@
 						<ul class="nav navbar-nav menu_nav justify-content-end">
 							<li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
 							<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+							<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
 							<li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
 							<li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
 							<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -83,8 +84,8 @@
 	</section>
 	<!--================ End About Us Area =================-->
 
-	<!--================ Srart Brand Area =================-->
-	<section class="skills section_gap_bottom cyber-grid-container">
+	<!--================ Skills Area =================-->
+	<section class="skills section_gap_bottom cyber-grid-container" id="skills">
 		<div class="container">
 			<div class="row justify-content-between">
 				<div class="col-md-6">
@@ -150,7 +151,7 @@
 		<div class="grid-floor">
 		</div>
 	</section>
-	<!--================ End Brand Area =================-->
+	<!--================ End Skills Area =================-->
 
 	<!--================ Start Features Area =================-->
 	<section id="services" class="services_area">
@@ -233,7 +234,7 @@
 	<!--================ End Features Area =================-->
 
 	<!--================Start Portfolio Area =================-->
-	<section class="portfolio_area" id="portfolio">
+	<!-- <section class="portfolio_area" id="portfolio">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -246,7 +247,7 @@
 			<div class="filters portfolio-filter">
 				<ul>
 					<li class="active" data-filter="*">all</li>
-					<li data-filter=".popular">popular</li>
+					<li data-filter=".pbook">Photobook</li>
 					<li data-filter=".latest"> latest</li>
 					<li data-filter=".following">following</li>
 					<li data-filter=".upcoming">upcoming</li>
@@ -272,7 +273,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-6 all popular">
+					<div class="col-lg-4 col-md-6 all pbook">
 						<div class="portfolio_box">
 							<div class="single_portfolio">
 								<img class="img-fluid w-100" src="img/portfolio/p2.jpg" alt="">
@@ -284,8 +285,8 @@
 								</a>
 							</div>
 							<div class="short_info">
-								<h4><a href="portfolio-details.html">Paint wall</a></h4>
-								<p>Animated, portfolio</p>
+								<h4><a href="https://simplebooklet.com/untitleddesign20251126234673">Wedding Photobook</a></h4>
+								<p>Animated, Photobook</p>
 							</div>
 						</div>
 					</div>
@@ -306,7 +307,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-6 all popular">
+					<div class="col-lg-4 col-md-6 all pbook">
 						<div class="portfolio_box">
 							<div class="single_portfolio">
 								<img class="img-fluid w-100" src="img/portfolio/p4.jpg" alt="">
@@ -411,7 +412,107 @@
 				</div>
 			</div>
 		</div>
+	</section> -->
+
+	<section class="portfolio_area" id="portfolio">
+		<div class="container">
+
+			<div class="section_title">
+			<h2>Selected Works</h2>
+			<p>Real projects across design, development, and visual storytelling.</p>
+			</div>
+
+			<!-- FILTER -->
+			<div class="portfolio_filter">
+				<button class="active" data-filter="*">All</button>
+				<button data-filter=".web">Websites</button>
+				<button data-filter=".photobook">Photobooks</button>
+				<button data-filter=".packaging">Packaging</button>
+				<button data-filter=".print">Print</button>
+			</div>
+
+			<!-- GRID -->
+			<div class="portfolio_grid">
+				<div class="grid-sizer"></div>
+				<div class="gutter-sizer"></div>
+				<!-- ITEM -->
+				<div class="portfolio_item web">
+					<div class="portfolio_card">
+						<img src="img/portfolio/web1_thumbs.png" alt="Website Design Project" loading="lazy">
+
+						<div class="portfolio_overlay">
+							<h3>Modern Business Website</h3>
+							<p>UI/UX • Web Design • Front-End Development</p>
+
+							<div class="actions">
+								<button class="view-btn" data-type="image" data-src="img/portfolio/web1.png">Preview</button>
+								<a href="https://www.figma.com/proto/jsbULj1oopemflzx3iV7Cs/TCAP-WEBSITE?node-id=45-12&t=gpDSxFqWEuWBJmsD-1" target="_blank">Live</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- PHOTOBOOK -->
+				<div class="portfolio_item photobook">
+					<div class="portfolio_card">
+						<img src="img/portfolio/pbook01.jpg" alt="Photobook" loading="lazy">
+
+						<div class="portfolio_overlay">
+							<h3>Wedding Photobook</h3>
+							<p>Layout • Storytelling</p>
+
+							<div class="actions">
+								<button class="view-btn" data-type="iframe" data-src="https://simplebooklet.com/embed.php?wpKey=yC22fkJxSKMkTnkCdZSTzl&source=embed">Preview</button>
+								<a href="https://simplebooklet.com/untitleddesign20251126234673" target="_blank">Live</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Print -->
+				<div class="portfolio_item print">
+					<div class="portfolio_card">
+						<img src="img/portfolio/booklet.png" alt="Booklet" loading="lazy">
+
+						<div class="portfolio_overlay">
+							<h3>Booklet</h3>
+							<p>Layout • Storytelling</p>
+
+							<div class="actions">
+								<button class="view-btn" data-type="iframe" data-src="https://simplebooklet.com/embed.php?wpKey=QN3gEzRdcoRzPsFESC6Too&source=embed">Preview</button>
+								<a href="https://simplebooklet.com/marketingpromotionsbrochure26" target="_blank">Live</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Print -->
+				<div class="portfolio_item print">
+					<div class="portfolio_card">
+						<img src="img/portfolio/booklet.png" alt="Booklet" loading="lazy">
+
+						<div class="portfolio_overlay">
+							<h3>Booklet</h3>
+							<p>Layout • Storytelling</p>
+
+							<div class="actions">
+								<button class="view-btn" data-type="iframe" data-src="https://simplebooklet.com/embed.php?wpKey=QN3gEzRdcoRzPsFESC6Too&source=embed">Preview</button>
+								<a href="https://simplebooklet.com/marketingpromotionsbrochure26" target="_blank">Live</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
 	</section>
+
+	<div class="portfolio_modal" id="portfolioModal">
+		<div class="modal_content">
+			<span class="close">&times;</span>
+			<div class="modal_body"></div>
+		</div>
+	</div>
 	<!--================End Portfolio Area =================-->
 
 	<!--================ Start Testimonial Area =================-->

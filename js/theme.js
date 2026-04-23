@@ -80,25 +80,79 @@
             Isotope js Starts
          --------------------------------------------- */
 	$(window).on('load', function() {
-		$('.portfolio-filter ul li').on('click', function() {
-			$('.portfolio-filter ul li').removeClass('active');
+
+		var $grid = $('.portfolio_grid').isotope({
+			itemSelector: '.portfolio_item',
+			percentPosition: true,
+			masonry: {
+			columnWidth: '.grid-sizer',
+			gutter: '.gutter-sizer'
+			}
+		});
+
+		// FILTER
+		$('.portfolio_filter button').on('click', function () {
+			$('.portfolio_filter button').removeClass('active');
 			$(this).addClass('active');
 
-			var data = $(this).attr('data-filter');
-			$workGrid.isotope({
-				filter: data
+			var filterValue = $(this).attr('data-filter');
+			$grid.isotope({ filter: filterValue });
+		});
+
+		// ANIMATION AFTER FILTER
+		$grid.on('arrangeComplete', function () {
+			gsap.from(".portfolio_item", {
+			opacity: 0,
+			y: 20,
+			stagger: 0.05,
+			duration: 0.5
 			});
 		});
 
-		if (document.getElementById('portfolio')) {
-			var $workGrid = $('.portfolio-grid').isotope({
-				itemSelector: '.all',
-				percentPosition: true,
-				masonry: {
-					columnWidth: '.all'
-				}
-			});
-		}
+	});
+
+	const modal = document.getElementById("portfolioModal");
+	const modalBody = modal.querySelector(".modal_body");
+	const closeBtn = modal.querySelector(".close");
+
+	// OPEN MODAL
+	document.querySelectorAll(".view-btn").forEach(btn => {
+		btn.addEventListener("click", () => {
+			const type = btn.dataset.type;
+			const src = btn.dataset.src;
+
+			modalBody.innerHTML = "";
+
+			if (type === "image") {
+				modalBody.innerHTML = `<img src="${src}" />`;
+			}
+
+			if (type === "iframe") {
+				modalBody.innerHTML = `<iframe src="${src}" frameborder="0"></iframe>`;
+			}
+
+			modal.classList.add("active");
+			document.body.style.overflow = "hidden";
+		});
+	});
+
+	// CLOSE MODAL
+	function closeModal() {
+		modal.classList.remove("active");
+		document.body.style.overflow = "";
+		setTimeout(() => (modalBody.innerHTML = ""), 300);
+	}
+
+	closeBtn.addEventListener("click", closeModal);
+
+	// CLOSE OUTSIDE CLICK
+	modal.addEventListener("click", (e) => {
+		if (e.target === modal) closeModal();
+	});
+
+	// ESC KEY
+	document.addEventListener("keydown", (e) => {
+		if (e.key === "Escape") closeModal();
 	});
 
 	/*----------------------------------------------------*/
