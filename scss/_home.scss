@@ -781,71 +781,160 @@
 /* Start Testimonial Area css
 ============================================================================================ */
 .testimonial_area {
-	background-color: $black;
-	.owl-carousel {
-		.owl-dots {
-			display: block !important;
-			text-align: center;
-			.owl-dot {
-				height: 10px;
-				width: 10px;
-				background: #d8d8d8;
-				border-radius: 17px;
-				display: inline-block;
-				margin-right: 10px;
-				@include transition();
-				&.active {
-					height: 12px;
-					width: 12px;
-					background: $primary-color2;
-				}
-			}
-			@media (max-width: 991px) {
-				display: none !important;
-			}
+	background: #000;
+	padding: 120px 0;
+	color: #fff;
+
+	.main_title {
+		h2 {
+		font-size: 36px;
+		font-weight: 600;
 		}
-		.owl-item {
-			img {
-				width: auto !important;
-			}
-		}
-	}
-}
-.testi_item {
-	padding: 50px 55px;
-	margin-bottom: 200px;
-	margin-left: 10px;
-	margin: 0px 10px 80px;
-	box-shadow: 0px 15px 30px 0px rgba(221, 221, 221, 0.3);
-	@include transition();
-	@media (max-width: 991px) {
-		margin-bottom: 0px;
-	}
-	@media (max-width: 575px) {
-		padding: 30px 20px;
-	}
-	img {
-		border-radius: 5px;
-	}
-	.col-lg-8 {
-		vertical-align: middle;
-		align-self: center;
-	}
-	.testi_text {
-		@media (max-width: 991px) {
-			margin-top: 50px;
-		}
-		h4 {
-			font-size: 20px;
-			margin-bottom: 15px;
-			text-transform: uppercase;
-		}
+
 		p {
-			margin-bottom: 0px;
+		opacity: 0.7;
+		max-width: 600px;
+		margin: 0 auto;
 		}
 	}
-	&:hover {
-		box-shadow: 0px 10px 20px 0px rgba(118, 85, 225, 0.1);
+
+	.testi_card {
+		width: 100%;
+		max-width: 340px;
+		margin: 0 auto;
+		position: relative;
+		padding: 1px;
+		border-radius: 20px;
+		overflow: hidden;
+
+		// 🔥 animated border (same system as services)
+		background: linear-gradient(120deg, transparent, #fff, transparent);
+		background-size: 200% 200%;
+		animation: borderMove 6s linear infinite;
+
+		@media (max-width: 768px) {
+			max-width: 100%;
+		}
+		.card_inner {
+			position: relative;
+			background: rgba(10, 10, 10, 0.85);
+			backdrop-filter: blur(14px);
+			border-radius: 20px;
+			padding: 30px;
+			text-align: center;
+			transition: all 0.3s ease;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 15px;
+
+			img {
+				width: 70px;
+				height: 70px;
+				border-radius: 50%;
+				object-fit: cover;
+				border: 2px solid rgba(255,255,255,0.2);
+			}
+
+			h4 {
+				font-size: 18px;
+				font-weight: 600;
+			}
+
+			p {
+				font-size: 14px;
+				opacity: 0.7;
+				line-height: 1.6;
+			}
+
+			.role {
+				font-size: 12px;
+				opacity: 0.5;
+			}
+			.quote {
+				position: absolute;
+				top: 10px;
+				left: 15px;
+				font-size: 50px;
+				opacity: 0.08;
+				pointer-events: none;
+			}
+			.stars {
+				font-size: 14px;
+				letter-spacing: 2px;
+				opacity: 0.6;
+			}
+		}
+		.card_inner > * {
+			opacity: 0;
+			transform: translateY(20px);
+			transition: all 0.5s ease;
+			@media (max-width: 767px) {
+				opacity: 1 !important;
+				transform: none !important;
+			}
+		}
+
+
+		&:hover .card_inner {
+		transform: translateY(-6px) scale(1.02);
+		box-shadow: 0 0 30px rgba(255,255,255,0.15);
+		}
+	}
+
+	// DESKTOP ONLY STACK EFFECT
+	@media (min-width: 768px) {
+
+		.swiper-slide {
+			opacity: 0.4;
+			transform: scale(0.85);
+		}
+
+		.swiper-slide-active {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+		// MOBILE RESET
+	@media (max-width: 767px) {
+		.swiper-slide {
+			opacity: 1 !important;
+			transform: none !important;
+		}
+	}
+
+		// 🔥 ACTIVE SLIDE ANIMATION
+	.swiper-slide-active .card_inner {
+
+		h4 {
+			transition-delay: 0.2s;
+		}
+
+		.role {
+			transition-delay: 0.3s;
+		}
+
+		.stars {
+			transition-delay: 0.4s;
+		}
+
+		p {
+			transition-delay: 0.5s;
+		}
+
+		.quote {
+			transition-delay: 0s;
+			transform: translateY(0) scale(1);
+			opacity: 0.08;
+		}
+
+		// APPLY FINAL STATE
+		> * {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 }
 /* End Testimonial Area css

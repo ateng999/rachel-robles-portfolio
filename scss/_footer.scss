@@ -1,16 +1,9 @@
 /* Footer Area css
 ============================================================================================ */
-.blog_version {
-	.footer_area {
-		background: $black;
-		&:before {
-			content: none;
-		}
-	}
-}
 .footer_area {
 	padding: 120px 0;
 	position: relative;
+	background-color: #000000;
 	&:before {
 		content: '';
 		position: absolute;
@@ -25,12 +18,14 @@
 		padding: 60px 0;
 	}
 	.footer_logo {
-		text-align: center;
+		margin: auto;
+		width: 40%;
 		h4 {
 			font-size: 20px;
-			color: #000000;
+			color: $title-color;
 			margin-top: 35px;
 			text-transform: uppercase;
+			text-align: center;
 		}
 	}
 	.footer_social {

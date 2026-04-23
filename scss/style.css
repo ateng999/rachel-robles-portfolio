@@ -171,7 +171,7 @@ button:focus {
   background: linear-gradient(90deg, #00f5ff 0%, #0047CC 100%);
 }
 
-.gradient-color, .contact_info .info_item i {
+.gradient-color {
   background: linear-gradient(90deg, #00f5ff 0%, #0047CC 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -392,10 +392,6 @@ button:focus {
   bottom: 25px;
 }
 
-.owl-carousel.off {
-  display: flex;
-}
-
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /* Home Banner Area css
@@ -590,114 +586,112 @@ button:focus {
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*============== contact_area css ================*/
-.mapBox {
-  height: 420px;
-  margin-top: 80px;
+.contact_area {
+  padding: 120px 0;
+  background: #000;
+  color: #fff;
 }
-
-.contact_info .info_item {
+.contact_area .contact_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 50px;
+}
+@media (max-width: 768px) {
+  .contact_area .contact_wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+.contact_area .contact_form {
   position: relative;
-  padding-left: 45px;
+  padding: 25px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(120deg, transparent, #fff, transparent);
+  background-size: 200% 200%;
+  animation: borderMove 6s linear infinite;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
-.contact_info .info_item i {
+.contact_area .contact_form::before {
+  content: "";
   position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 600;
+  inset: 2px;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  z-index: 0;
 }
-.contact_info .info_item h6 {
-  font-size: 16px;
-  line-height: 24px;
-  color: "Roboto", sans-serif;
-  font-weight: bold;
-  margin-bottom: 0px;
-  color: #ffffff;
+.contact_area .contact_form * {
+  position: relative;
+  z-index: 1;
 }
-.contact_info .info_item h6 a {
-  color: #ffffff;
+.contact_area .form_group {
+  position: relative;
 }
-.contact_info .info_item p {
-  font-size: 14px;
-  line-height: 24px;
-  padding: 2px 0px;
+.contact_area .form_group input,
+.contact_area .form_group textarea {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  color: #fff;
+  transition: all 0.3s ease;
 }
-
-.contact_form .form-group {
-  margin-bottom: 10px;
-}
-.contact_form .form-group .form-control {
+.contact_area .form_group label {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
   font-size: 13px;
-  line-height: 26px;
-  color: #999;
-  border: 1px solid #eeeeee;
-  font-family: "Roboto", sans-serif;
-  border-radius: 0px;
-  padding-left: 20px;
+  opacity: 0.5;
+  pointer-events: none;
+  transition: 0.3s;
 }
-.contact_form .form-group .form-control:focus {
-  box-shadow: none;
-  outline: none;
-}
-.contact_form .form-group .form-control.placeholder {
-  color: #999;
-}
-.contact_form .form-group .form-control:-moz-placeholder {
-  color: #999;
-}
-.contact_form .form-group .form-control::-moz-placeholder {
-  color: #999;
-}
-.contact_form .form-group .form-control::-webkit-input-placeholder {
-  color: #999;
-}
-.contact_form .form-group textarea {
+.contact_area .form_group textarea {
   resize: none;
 }
-.contact_form .form-group textarea.form-control {
-  height: 134px;
+.contact_area .form_group input:not(:-moz-placeholder), .contact_area .form_group textarea:not(:-moz-placeholder) {
+  border-color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
-.contact_form .primary_btn {
-  margin-top: 20px;
+.contact_area .form_group input:focus,
+.contact_area .form_group textarea:focus,
+.contact_area .form_group input:not(:placeholder-shown),
+.contact_area .form_group textarea:not(:placeholder-shown) {
+  border-color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
-
-/* Contact Success and error Area css
-============================================================================================ */
-.modal-message .modal-dialog {
-  position: absolute;
-  top: 36%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%) !important;
-  margin: 0px;
-  max-width: 500px;
-  width: 100%;
+.contact_area .form_group input:not(:-moz-placeholder) + label, .contact_area .form_group textarea:not(:-moz-placeholder) + label {
+  top: 6px;
+  font-size: 10px;
+  opacity: 0.7;
 }
-.modal-message .modal-dialog .modal-content .modal-header {
-  text-align: center;
-  display: block;
-  border-bottom: none;
-  padding-top: 50px;
-  padding-bottom: 50px;
+.contact_area .form_group input:focus + label,
+.contact_area .form_group textarea:focus + label,
+.contact_area .form_group input:not(:placeholder-shown) + label,
+.contact_area .form_group textarea:not(:placeholder-shown) + label {
+  top: 6px;
+  font-size: 10px;
+  opacity: 0.7;
 }
-.modal-message .modal-dialog .modal-content .modal-header .close {
-  position: absolute;
-  right: -15px;
-  top: -15px;
-  padding: 0px;
-  color: #fff;
-  opacity: 1;
+.contact_area .btn_submit {
+  padding: 16px;
+  border-radius: 12px;
+  border: none;
+  background: #fff;
+  color: #000;
+  font-weight: 600;
   cursor: pointer;
+  transition: 0.3s;
 }
-.modal-message .modal-dialog .modal-content .modal-header h2 {
-  display: block;
-  text-align: center;
-  color: #00f5ff;
-  padding-bottom: 10px;
-  font-family: "Roboto", sans-serif;
+.contact_area .btn_submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
 }
-.modal-message .modal-dialog .modal-content .modal-header p {
-  display: block;
+.contact_area .btn_submit:active {
+  transform: scale(0.96);
 }
 
 /* End Contact Success and error Area css
@@ -2793,75 +2787,134 @@ h6 {
 /* Start Testimonial Area css
 ============================================================================================ */
 .testimonial_area {
-  background-color: #000000;
+  background: #000;
+  padding: 120px 0;
+  color: #fff;
 }
-.testimonial_area .owl-carousel .owl-dots {
-  display: block !important;
+.testimonial_area .main_title h2 {
+  font-size: 36px;
+  font-weight: 600;
+}
+.testimonial_area .main_title p {
+  opacity: 0.7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.testimonial_area .testi_card {
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+  position: relative;
+  padding: 1px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(120deg, transparent, #fff, transparent);
+  background-size: 200% 200%;
+  animation: borderMove 6s linear infinite;
+}
+@media (max-width: 768px) {
+  .testimonial_area .testi_card {
+    max-width: 100%;
+  }
+}
+.testimonial_area .testi_card .card_inner {
+  position: relative;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 30px;
   text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
-.testimonial_area .owl-carousel .owl-dots .owl-dot {
-  height: 10px;
-  width: 10px;
-  background: #d8d8d8;
-  border-radius: 17px;
-  display: inline-block;
-  margin-right: 10px;
-  transition: all 0.4s ease 0s;
+.testimonial_area .testi_card .card_inner img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
-.testimonial_area .owl-carousel .owl-dots .owl-dot.active {
-  height: 12px;
-  width: 12px;
-  background: #0047CC;
+.testimonial_area .testi_card .card_inner h4 {
+  font-size: 18px;
+  font-weight: 600;
 }
-@media (max-width: 991px) {
-  .testimonial_area .owl-carousel .owl-dots {
-    display: none !important;
+.testimonial_area .testi_card .card_inner p {
+  font-size: 14px;
+  opacity: 0.7;
+  line-height: 1.6;
+}
+.testimonial_area .testi_card .card_inner .role {
+  font-size: 12px;
+  opacity: 0.5;
+}
+.testimonial_area .testi_card .card_inner .quote {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 50px;
+  opacity: 0.08;
+  pointer-events: none;
+}
+.testimonial_area .testi_card .card_inner .stars {
+  font-size: 14px;
+  letter-spacing: 2px;
+  opacity: 0.6;
+}
+.testimonial_area .testi_card .card_inner > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+@media (max-width: 767px) {
+  .testimonial_area .testi_card .card_inner > * {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
-.testimonial_area .owl-carousel .owl-item img {
-  width: auto !important;
+.testimonial_area .testi_card:hover .card_inner {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
 }
-
-.testi_item {
-  padding: 50px 55px;
-  margin-bottom: 200px;
-  margin-left: 10px;
-  margin: 0px 10px 80px;
-  box-shadow: 0px 15px 30px 0px rgba(221, 221, 221, 0.3);
-  transition: all 0.4s ease 0s;
-}
-@media (max-width: 991px) {
-  .testi_item {
-    margin-bottom: 0px;
+@media (min-width: 768px) {
+  .testimonial_area .swiper-slide {
+    opacity: 0.4;
+    transform: scale(0.85);
+  }
+  .testimonial_area .swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
   }
 }
-@media (max-width: 575px) {
-  .testi_item {
-    padding: 30px 20px;
+@media (max-width: 767px) {
+  .testimonial_area .swiper-slide {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
-.testi_item img {
-  border-radius: 5px;
+.testimonial_area .swiper-slide-active .card_inner h4 {
+  transition-delay: 0.2s;
 }
-.testi_item .col-lg-8 {
-  vertical-align: middle;
-  align-self: center;
+.testimonial_area .swiper-slide-active .card_inner .role {
+  transition-delay: 0.3s;
 }
-@media (max-width: 991px) {
-  .testi_item .testi_text {
-    margin-top: 50px;
-  }
+.testimonial_area .swiper-slide-active .card_inner .stars {
+  transition-delay: 0.4s;
 }
-.testi_item .testi_text h4 {
-  font-size: 20px;
-  margin-bottom: 15px;
-  text-transform: uppercase;
+.testimonial_area .swiper-slide-active .card_inner p {
+  transition-delay: 0.5s;
 }
-.testi_item .testi_text p {
-  margin-bottom: 0px;
+.testimonial_area .swiper-slide-active .card_inner .quote {
+  transition-delay: 0s;
+  transform: translateY(0) scale(1);
+  opacity: 0.08;
 }
-.testi_item:hover {
-  box-shadow: 0px 10px 20px 0px rgba(118, 85, 225, 0.1);
+.testimonial_area .swiper-slide-active .card_inner > * {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* End Testimonial Area css
@@ -3011,31 +3064,6 @@ h6 {
     background-image: none !important;
     background-color: #fcf8ff;
   }
-  /* Blog page Area css
-  ============================================================================================ */
-  .categories_post img {
-    width: 100%;
-  }
-  .categories_post {
-    max-width: 360px;
-    margin: 0 auto;
-  }
-  .blog_categorie_area .col-lg-4 {
-    margin-top: 30px;
-  }
-  .blog_area {
-    padding-bottom: 80px;
-  }
-  .single-post-area .blog_right_sidebar {
-    margin-top: 30px;
-  }
-  /* End Blog page Area css
-  ============================================================================================ */
-  /* Contact Page Area css
-  ============================================================================================ */
-  .contact_info {
-    margin-bottom: 50px;
-  }
   /* End Contact page Area css
   ============================================================================================ */
   .home_banner_area .donation_inner {
@@ -3053,9 +3081,6 @@ h6 {
   .footer_area .footer_inner {
     margin-bottom: -30px;
   }
-  .news_widget {
-    padding-left: 0px;
-  }
   /* End End Footer Area css
   ============================================================================================ */
   .home_banner_area .banner_inner .home_left_img {
@@ -3066,13 +3091,6 @@ h6 {
   }
   .left_side_text {
     margin-bottom: 50px;
-  }
-  .price_item {
-    max-width: 360px;
-    margin: 0px auto 30px;
-  }
-  .price_inner {
-    margin-bottom: -30px;
   }
 }
 @media (max-width: 767px) {
@@ -3086,12 +3104,6 @@ h6 {
   }
   .home_banner_area .banner_inner .mouse-wrap {
     bottom: 30px;
-  }
-  /* Blog Page Area css
-  ============================================================================================ */
-  .blog_info.text-right {
-    text-align: left !important;
-    margin-bottom: 10px;
   }
   /* End Blog Page Area css
   ============================================================================================ */
@@ -3109,18 +3121,6 @@ h6 {
   }
   /* End End Footer Area css
   ============================================================================================ */
-  .made_life_inner .nav.nav-tabs li {
-    flex: 0 0 50%;
-    max-width: 50%;
-    margin-bottom: 15px;
-  }
-  .made_life_inner .nav.nav-tabs {
-    margin-bottom: -15px;
-  }
-  .made_life_area.made_white .left_side_text {
-    margin-bottom: 0px;
-    margin-top: 30px;
-  }
 }
 @media (max-width: 575px) {
   .header_area + section,
@@ -3152,33 +3152,14 @@ h6 {
     padding-top: 140px;
     padding-bottom: 70px;
   }
-  /*Recent Update Area css
-  ============================================================================================ */
-  /* Elements Area css
-  ============================================================================================ */
-  .sample-text-area {
-    padding: 70px 0 70px 0;
-  }
-  .generic-blockquote {
-    padding: 30px 15px 30px 30px;
-  }
   /* End Elements Area css
   ============================================================================================ */
-  /* Blog Page Area css
-  ============================================================================================ */
-  .blog_details h2 {
-    font-size: 20px;
-    line-height: 30px;
-  }
   /* End Blog Page Area css
   ============================================================================================ */
   /* Footer Area css
   ============================================================================================ */
   .footer-area {
     padding: 70px 0px;
-  }
-  .news_widget {
-    padding-left: 0 !important;
   }
   /* End End Footer Area css
   ============================================================================================ */
@@ -3206,16 +3187,6 @@ h6 {
   .home_banner_area .banner_inner .banner_content h3 {
     font-size: 24px;
   }
-  /* End Home Banner Area css
-  ============================================================================================ */
-  .banner_area .banner_inner .banner_content h2 {
-    font-size: 32px;
-  }
-  /* Blog Page Area css
-  ============================================================================================ */
-  .comments-area .thumb {
-    margin-right: 10px;
-  }
   /* End Blog Page Area css
   ============================================================================================ */
   .testi_item .media .d-flex {
@@ -3229,28 +3200,14 @@ h6 {
     display: block;
   }
 }
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* Start Brand Carousel Area css
-  ============================================================================================ */
-  .brand-carousel .single-brand-item {
-    height: 100px;
-    width: 140px;
-  }
-}
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /* Footer Area css
 ============================================================================================ */
-.blog_version .footer_area {
-  background: #000000;
-}
-.blog_version .footer_area:before {
-  content: none;
-}
-
 .footer_area {
   padding: 120px 0;
   position: relative;
+  background-color: #000000;
 }
 .footer_area:before {
   content: "";
@@ -3268,13 +3225,15 @@ h6 {
   }
 }
 .footer_area .footer_logo {
-  text-align: center;
+  margin: auto;
+  width: 40%;
 }
 .footer_area .footer_logo h4 {
   font-size: 20px;
-  color: #000000;
+  color: #ffffff;
   margin-top: 35px;
   text-transform: uppercase;
+  text-align: center;
 }
 .footer_area .footer_social {
   text-align: center;

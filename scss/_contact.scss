@@ -1,110 +1,117 @@
 /*============== contact_area css ================*/
 .contact_area {
-}
-.mapBox {
-	height: 420px;
-	margin-top: 80px;
-}
-.contact_info {
-	.info_item {
-		position: relative;
-		padding-left: 45px;
-		i {
-			position: absolute;
-			left: 0;
-			top: 0;
-			font-size: 20px;
-			line-height: 24px;
-			@extend .gradient-color;
-			font-weight: 600;
-		}
-		h6 {
-			font-size: 16px;
-			line-height: 24px;
-			color: $primary-font;
-			font-weight: bold;
-			margin-bottom: 0px;
-			color: $title-color;
-			a {
-				color: $title-color;
-			}
-		}
-		p {
-			font-size: 14px;
-			line-height: 24px;
-			padding: 2px 0px;
-		}
-	}
-}
-.contact_form {
-	.form-group {
-		margin-bottom: 10px;
-		.form-control {
-			font-size: 13px;
-			line-height: 26px;
-			color: #999;
-			border: 1px solid #eeeeee;
-			font-family: $primary-font;
-			border-radius: 0px;
-			padding-left: 20px;
-			&:focus {
-				box-shadow: none;
-				outline: none;
-			}
-			@include placeholder {
-				color: #999;
-			}
-		}
-		textarea {
-			resize: none;
-			&.form-control {
-				height: 134px;
-			}
-		}
-	}
-	.primary_btn {
-		margin-top: 20px;
-	}
-}
+	padding: 120px 0;
+	background: #000;
+	color: #fff;
 
-/* Contact Success and error Area css
-============================================================================================ */
-.modal-message {
-	.modal-dialog {
+	.contact_wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1.5fr;
+		gap: 50px;
+
+		@media (max-width: 768px) {
+		grid-template-columns: 1fr;
+		}
+	}
+
+	// 🔥 GLASS FORM
+	.contact_form {
+		position: relative;
+		padding: 25px;
+		border-radius: 20px;
+		overflow: hidden;
+
+		background: linear-gradient(120deg, transparent, #fff, transparent);
+		background-size: 200% 200%;
+		animation: borderMove 6s linear infinite;
+
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+
+		// INNER GLASS
+		&::before {
+		content: "";
 		position: absolute;
-		top: 36%;
-		left: 50%;
-		transform: translateX(-50%) translateY(-50%) !important;
-		margin: 0px;
-		max-width: 500px;
+		inset: 2px;
+		background: rgba(10, 10, 10, 0.85);
+		backdrop-filter: blur(12px);
+		border-radius: 18px;
+		z-index: 0;
+		}
+
+		* {
+		position: relative;
+		z-index: 1;
+		}
+	}
+
+	.form_group {
+		position: relative;
+
+		input,
+		textarea {
 		width: 100%;
-		.modal-content {
-			.modal-header {
-				text-align: center;
-				display: block;
-				border-bottom: none;
-				padding-top: 50px;
-				padding-bottom: 50px;
-				.close {
-					position: absolute;
-					right: -15px;
-					top: -15px;
-					padding: 0px;
-					color: #fff;
-					opacity: 1;
-					cursor: pointer;
-				}
-				h2 {
-					display: block;
-					text-align: center;
-					color: $primary-color;
-					padding-bottom: 10px;
-					font-family: $primary-font;
-				}
-				p {
-					display: block;
-				}
-			}
+		padding: 16px;
+		border-radius: 12px;
+		border: 1px solid rgba(255,255,255,0.1);
+		background: rgba(255,255,255,0.03);
+		color: #fff;
+
+		transition: all 0.3s ease;
+		}
+
+		label {
+		position: absolute;
+		top: 50%;
+		left: 16px;
+		transform: translateY(-50%);
+		font-size: 13px;
+		opacity: 0.5;
+		pointer-events: none;
+		transition: 0.3s;
+		}
+
+		textarea {
+		resize: none;
+		}
+
+		input:focus,
+		textarea:focus,
+		input:not(:placeholder-shown),
+		textarea:not(:placeholder-shown) {
+		border-color: #fff;
+		box-shadow: 0 0 10px rgba(255,255,255,0.2);
+		}
+
+		input:focus + label,
+		textarea:focus + label,
+		input:not(:placeholder-shown) + label,
+		textarea:not(:placeholder-shown) + label {
+		top: 6px;
+		font-size: 10px;
+		opacity: 0.7;
+		}
+	}
+
+	// 🔥 BUTTON
+	.btn_submit {
+		padding: 16px;
+		border-radius: 12px;
+		border: none;
+		background: #fff;
+		color: #000;
+		font-weight: 600;
+		cursor: pointer;
+		transition: 0.3s;
+
+		&:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 10px 25px rgba(255,255,255,0.2);
+		}
+
+		&:active {
+		transform: scale(0.96);
 		}
 	}
 }
