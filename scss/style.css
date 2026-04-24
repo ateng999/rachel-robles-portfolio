@@ -113,11 +113,11 @@ button:focus {
 ============================================================================================ */
 .main_title {
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 @media (max-width: 1199px) {
   .main_title {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 }
 .main_title h2 {
@@ -231,6 +231,10 @@ button:focus {
 
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+body.menu-open {
+  overflow: hidden;
+}
+
 .header_area {
   position: absolute;
   width: 100%;
@@ -260,6 +264,11 @@ button:focus {
 .header_area .navbar .nav .nav-item {
   margin-right: 45px;
 }
+@media (max-width: 991px) {
+  .header_area .navbar .nav .nav-item {
+    margin-right: 0;
+  }
+}
 .header_area .navbar .nav .nav-item .nav-link {
   position: relative;
   font: 300 16px/100px "Oswald", sans-serif;
@@ -268,6 +277,11 @@ button:focus {
   padding: 0px;
   display: inline-block;
   transition: color 0.3s ease;
+}
+@media (max-width: 991px) {
+  .header_area .navbar .nav .nav-item .nav-link {
+    line-height: 1;
+  }
 }
 .header_area .navbar .nav .nav-item .nav-link::after {
   content: "";
@@ -289,7 +303,7 @@ button:focus {
 .header_area .navbar .nav .nav-item .nav-link.active::after {
   width: 100%;
 }
-.header_area .navbar .nav .nav-item:hover .nav-link {
+.header_area .navbar .nav .nav-item:hover {
   color: #00f5ff;
 }
 .header_area .navbar .nav .nav-item.submenu {
@@ -373,19 +387,22 @@ button:focus {
 .header_area.navbar_fixed .main_menu {
   position: fixed;
   width: 100%;
-  top: -70px;
+  top: 0;
   left: 0;
-  right: 0;
   opacity: 1;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(15px);
-  transform: translateY(70px);
   transition: transform 500ms ease, background 500ms ease;
   -webkit-transition: transform 500ms ease, background 500ms ease;
   box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
 }
 .header_area.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link {
   line-height: 70px;
+}
+@media (max-width: 991px) {
+  .header_area.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link {
+    line-height: 1;
+  }
 }
 .header_area.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link::after {
   content: "";
@@ -587,7 +604,7 @@ button:focus {
 /*----------------------------------------------------*/
 /*============== contact_area css ================*/
 .contact_area {
-  padding: 120px 0;
+  padding: 120px 0 30px;
   background: #000;
   color: #fff;
 }
@@ -600,6 +617,67 @@ button:focus {
   .contact_area .contact_wrapper {
     grid-template-columns: 1fr;
   }
+}
+.contact_area .section_title h2 {
+  font-size: 3.5rem;
+  font-weight: 300;
+}
+.contact_area .section_title p {
+  opacity: 0.7;
+}
+.contact_area .contact_info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 40px;
+}
+.contact_area .info_card {
+  padding: 18px 20px;
+  border-radius: 14px;
+  position: relative;
+  padding: 25px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(120deg, transparent, #fff, transparent);
+  background-size: 200% 200%;
+  animation: borderMove 6s linear infinite;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.contact_area .info_card::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  z-index: 0;
+}
+.contact_area .info_card * {
+  position: relative;
+  z-index: 1;
+}
+.contact_area .info_card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+}
+.contact_area .info_card .label {
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+.contact_area .info_card .value {
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.contact_area .info_card a.value {
+  transition: color 0.3s ease;
+}
+.contact_area .info_card a.value:hover {
+  color: #ffffff;
 }
 .contact_area .contact_form {
   position: relative;
@@ -2268,11 +2346,15 @@ h6 {
     max-width: 100%;
   }
 }
-.skills .section-title {
-  font-size: 2.5rem;
+.skills h2 {
   margin-bottom: 50px;
-  color: #fff;
+  font-size: 3rem;
+  font-weight: 600;
   text-align: left;
+  letter-spacing: -1px;
+  background: linear-gradient(90deg, #fff, #00f5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .skills .client-info {
   text-align: center;
@@ -2422,24 +2504,23 @@ h6 {
 /* Start Features Area css
 ============================================================================================ */
 .services_area {
-  padding: 120px 0;
+  padding: 120px 0 30px;
   background: #000000;
   color: #fff;
 }
 .services_area .section_title {
   text-align: center;
-  margin-bottom: 60px;
 }
 .services_area .section_title h2 {
-  font-size: 36px;
-  font-weight: 600;
+  font-size: 3.5rem;
+  font-weight: 300;
 }
 .services_area .section_title p {
   opacity: 0.7;
 }
 .services_area .services-slider {
   width: 100%;
-  padding: 100px 0;
+  padding: 50px 0;
   max-width: 1100px;
   margin: auto;
   overflow: hidden;
@@ -2554,7 +2635,7 @@ h6 {
 /* Start Portfolio Area css
 ============================================================================================ */
 .portfolio_area {
-  padding: 120px 0;
+  padding: 120px 0 30px;
   background: radial-gradient(circle at top, #0a0d14, #05070a);
 }
 .portfolio_area .section_title {
@@ -2608,7 +2689,7 @@ h6 {
 }
 .portfolio_area .portfolio_grid .grid-sizer,
 .portfolio_area .portfolio_grid .portfolio_item {
-  width: calc(33.333% - 16px);
+  width: calc(25% - 18px);
 }
 .portfolio_area .portfolio_grid .gutter-sizer {
   width: 24px;
@@ -2616,13 +2697,16 @@ h6 {
 @media (max-width: 991px) {
   .portfolio_area .portfolio_grid .grid-sizer,
   .portfolio_area .portfolio_grid .portfolio_item {
-    width: calc(50% - 12px);
+    width: calc(33.333% - 16px);
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 480px) {
   .portfolio_area .portfolio_grid .grid-sizer,
   .portfolio_area .portfolio_grid .portfolio_item {
-    width: 100%;
+    width: calc(50% - 8px);
+  }
+  .portfolio_area .portfolio_grid .gutter-sizer {
+    width: 10px;
   }
 }
 .portfolio_area .portfolio_grid {
@@ -2787,155 +2871,106 @@ h6 {
 /* Start Testimonial Area css
 ============================================================================================ */
 .testimonial_area {
-  background: #000;
-  padding: 120px 0;
-  color: #fff;
+  position: relative;
+  background: #000000;
+  padding: 120px 0 30px;
 }
-.testimonial_area .main_title h2 {
-  font-size: 36px;
-  font-weight: 600;
+.testimonial_area .main_title {
+  margin: 0;
 }
-.testimonial_area .main_title p {
-  opacity: 0.7;
-  max-width: 600px;
-  margin: 0 auto;
+.testimonial_area .testimonial-slider {
+  padding: 60px 20px;
+}
+.testimonial_area .swiper-wrapper {
+  align-items: stretch;
+}
+.testimonial_area .swiper-slide {
+  height: auto !important;
+  display: flex;
 }
 .testimonial_area .testi_card {
-  width: 100%;
-  max-width: 340px;
-  margin: 0 auto;
-  position: relative;
-  padding: 1px;
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 20px;
-  overflow: hidden;
-  background: linear-gradient(120deg, transparent, #fff, transparent);
+  padding: 25px;
+  background: linear-gradient(120deg, transparent, #ffffff, transparent);
   background-size: 200% 200%;
-  animation: borderMove 6s linear infinite;
-}
-@media (max-width: 768px) {
-  .testimonial_area .testi_card {
-    max-width: 100%;
-  }
-}
-.testimonial_area .testi_card .card_inner {
+  animation: borderMove 4s linear infinite;
   position: relative;
-  background: rgba(10, 10, 10, 0.85);
-  backdrop-filter: blur(14px);
-  border-radius: 20px;
-  padding: 30px;
-  text-align: center;
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+  transition: all 0.4s ease;
 }
-.testimonial_area .testi_card .card_inner img {
-  width: 70px;
-  height: 70px;
+.testimonial_area .testi_card::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  z-index: 0;
+}
+.testimonial_area .testi_card * {
+  position: relative;
+  z-index: 1;
+}
+.testimonial_area .testi_card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+}
+.testimonial_area .testi_card img {
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  margin: 20px 0;
 }
-.testimonial_area .testi_card .card_inner h4 {
+.testimonial_area .testi_card h4 {
+  margin-bottom: 5px;
   font-size: 18px;
-  font-weight: 600;
 }
-.testimonial_area .testi_card .card_inner p {
+.testimonial_area .testi_card .role {
   font-size: 14px;
-  opacity: 0.7;
-  line-height: 1.6;
+  color: #aaa;
+  display: block;
+  margin-bottom: 10px;
 }
-.testimonial_area .testi_card .card_inner .role {
-  font-size: 12px;
-  opacity: 0.5;
+.testimonial_area .testi_card .stars {
+  color: #ffc107;
+  margin-bottom: 15px;
+  letter-spacing: 3px;
 }
-.testimonial_area .testi_card .card_inner .quote {
-  position: absolute;
-  top: 10px;
-  left: 15px;
-  font-size: 50px;
-  opacity: 0.08;
-  pointer-events: none;
+.testimonial_area .testi_card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #ccc;
 }
-.testimonial_area .testi_card .card_inner .stars {
-  font-size: 14px;
-  letter-spacing: 2px;
-  opacity: 0.6;
+.testimonial_area .testi_card .card_inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.testimonial_area .testi_card .card_inner > * {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.5s ease;
+.testimonial_area {
+  /* Pagination at bottom */
 }
-@media (max-width: 767px) {
-  .testimonial_area .testi_card .card_inner > * {
-    opacity: 1 !important;
-    transform: none !important;
-  }
+.testimonial_area .swiper-pagination {
+  position: relative;
+  margin-top: 40px;
+  text-align: center;
 }
-.testimonial_area .testi_card:hover .card_inner {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
-}
-@media (min-width: 768px) {
-  .testimonial_area .swiper-slide {
-    opacity: 0.4;
-    transform: scale(0.85);
-  }
-  .testimonial_area .swiper-slide-active {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-@media (max-width: 767px) {
-  .testimonial_area .swiper-slide {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-}
-.testimonial_area .swiper-slide-active .card_inner h4 {
-  transition-delay: 0.2s;
-}
-.testimonial_area .swiper-slide-active .card_inner .role {
-  transition-delay: 0.3s;
-}
-.testimonial_area .swiper-slide-active .card_inner .stars {
-  transition-delay: 0.4s;
-}
-.testimonial_area .swiper-slide-active .card_inner p {
-  transition-delay: 0.5s;
-}
-.testimonial_area .swiper-slide-active .card_inner .quote {
-  transition-delay: 0s;
-  transform: translateY(0) scale(1);
-  opacity: 0.08;
-}
-.testimonial_area .swiper-slide-active .card_inner > * {
+.testimonial_area .swiper-pagination-bullet {
+  background: #666;
   opacity: 1;
-  transform: translateY(0);
+}
+.testimonial_area .swiper-pagination-bullet-active {
+  background: #00f0ff;
+  width: 24px;
+  border-radius: 8px;
 }
 
 /* End Testimonial Area css
 ============================================================================================ */
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
-@media (max-width: 1619px) {
-  /* Main Menu Area css
-  ============================================================================================ */
-  .header_area .navbar .search {
-    margin-left: 40px;
-  }
-  /* End Main Menu Area css
-  ============================================================================================ */
-}
 @media (max-width: 1199px) {
-  /* Main Menu Area css
-  ============================================================================================ */
-  .header_area .navbar .nav .nav-item {
-    margin-right: 28px;
-  }
   /* End Main Menu Area css
   ============================================================================================ */
   /* Home Banner Area css
@@ -3017,6 +3052,15 @@ h6 {
     border-radius: 0px;
     color: #fff;
   }
+  .header_area .navbar .nav .nav-item .nav-link::after {
+    bottom: 0;
+  }
+  .header_area .navbar .nav .nav-item .nav-link:hover, .header_area .navbar .nav .nav-item .nav-link:active {
+    color: #ffffff;
+  }
+  .header_area .navbar .nav .nav-item .nav-link:hover::after, .header_area .navbar .nav .nav-item .nav-link:active::after {
+    width: 0;
+  }
   .header_area .navbar .search {
     margin-left: 0px;
   }
@@ -3039,12 +3083,8 @@ h6 {
     line-height: 40px;
     color: #fff;
   }
-  .header_area.white_menu.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link {
-    line-height: 40px;
-    color: #fff;
-  }
-  .header_area.white_menu .navbar .nav .nav-item .nav-link {
-    color: #222;
+  .header_area.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link::after {
+    bottom: 0;
   }
   /* End Main Menu Area css
   ============================================================================================ */
@@ -3059,10 +3099,7 @@ h6 {
   /* Footer Area css
   ============================================================================================ */
   .footer_area {
-    padding-top: 80px !important;
-    padding-bottom: 80px !important;
     background-image: none !important;
-    background-color: #fcf8ff;
   }
   /* End Contact page Area css
   ============================================================================================ */
@@ -3123,39 +3160,10 @@ h6 {
   ============================================================================================ */
 }
 @media (max-width: 575px) {
-  .header_area + section,
-  .header_area + row,
-  .header_area + div {
-    margin-top: 0px;
-  }
-  /* Home Banner Area css
-  ============================================================================================ */
-  .home_banner_area .banner_inner .banner_content h2 {
-    font-size: 28px;
-    line-height: 38px;
-  }
-  .home_banner_area {
-    min-height: 450px;
-  }
-  .home_banner_area .banner_inner {
-    min-height: 450px;
-  }
-  .home_banner_area .banner_inner .banner_content img {
-    display: none;
-  }
-  .home_banner_area .banner_inner .banner_content h5 {
-    margin-top: 0px;
-  }
-  /* End Home Banner Area css
-  ============================================================================================ */
   .section_gap {
     padding-top: 140px;
     padding-bottom: 70px;
   }
-  /* End Elements Area css
-  ============================================================================================ */
-  /* End Blog Page Area css
-  ============================================================================================ */
   /* Footer Area css
   ============================================================================================ */
   .footer-area {
@@ -3171,13 +3179,6 @@ h6 {
   }
 }
 @media (max-width: 480px) {
-  /* Main Menu Area css
-  ============================================================================================ */
-  .header_area .navbar-collapse {
-    max-height: 250px;
-  }
-  /* End Main Menu Area css
-  ============================================================================================ */
   /* Home Banner Area css
   ============================================================================================ */
   .home_banner_area .banner_inner .banner_content {
@@ -3221,7 +3222,7 @@ h6 {
 }
 @media (max-width: 1024px) {
   .footer_area {
-    padding: 60px 0;
+    padding: 60px 0 30px;
   }
 }
 .footer_area .footer_logo {

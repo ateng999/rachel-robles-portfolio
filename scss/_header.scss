@@ -1,3 +1,6 @@
+body.menu-open {
+	overflow: hidden;
+}
 //header_area css
 .header_area {
     position: absolute;
@@ -24,6 +27,9 @@
         .nav {
             .nav-item {
                 margin-right: 45px;
+                @media (max-width: 991px) {
+                    margin-right: 0;
+                }
                 .nav-link {
                     position: relative;
                     font: 300 16px/100px $title-font;
@@ -32,6 +38,10 @@
                     padding: 0px;
                     display: inline-block;
                     transition: color 0.3s ease;
+
+                    @media (max-width: 991px) {
+                        line-height: 1;
+                    }
 
                     &::after {
                         content: "";
@@ -58,9 +68,7 @@
 
                 }
                 &:hover {
-                    .nav-link {
-                        color: $primary-color;
-                    }
+                    color: $primary-color;
                 }
                 &.submenu {
                     position: relative;
@@ -150,13 +158,11 @@
         .main_menu {
             position: fixed;
             width: 100%;
-            top: -70px;
+            top: 0;
             left: 0;
-            right: 0;
             opacity: 1;
             background: rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(15px);
-            transform: translateY(70px);
             transition: transform 500ms ease, background 500ms ease;
             -webkit-transition: transform 500ms ease, background 500ms ease;
             box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
@@ -165,6 +171,9 @@
                     .nav-item {
                         .nav-link {
                             line-height: 70px;
+                            @media (max-width: 991px) {
+                                line-height: 1;
+                            }
                             &::after {
                                 content: "";
                                 bottom: 25px;

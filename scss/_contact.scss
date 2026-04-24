@@ -1,6 +1,6 @@
 /*============== contact_area css ================*/
 .contact_area {
-	padding: 120px 0;
+	padding: 120px 0 30px;
 	background: #000;
 	color: #fff;
 
@@ -11,6 +11,83 @@
 
 		@media (max-width: 768px) {
 		grid-template-columns: 1fr;
+		}
+	}
+	.section_title {
+		h2 {
+			font-size: 3.5rem;
+			font-weight: 300;
+		}
+
+		p {
+			opacity: 0.7;
+		}
+	}
+
+	.contact_info {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		gap: 16px;
+		margin-top: 40px;
+	}
+
+	.info_card {
+		padding: 18px 20px;
+		border-radius: 14px;
+		position: relative;
+		padding: 25px;
+		border-radius: 20px;
+		overflow: hidden;
+
+		background: linear-gradient(120deg, transparent, #fff, transparent);
+		background-size: 200% 200%;
+		animation: borderMove 6s linear infinite;
+
+
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+
+		// INNER GLASS
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 2px;
+			background: rgba(10, 10, 10, 0.85);
+			backdrop-filter: blur(12px);
+			border-radius: 18px;
+			z-index: 0;
+		}
+
+		* {
+			position: relative;
+			z-index: 1;
+		}
+
+		&:hover {
+			border-color: rgba(255, 255, 255, 0.2);
+			transform: translateY(-4px);
+		}
+
+		.label {
+			font-size: 18px;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			color: #9ca3af;
+		}
+
+		.value {
+			font-size: 14px;
+			color: #ffffff;
+			text-decoration: none;
+		}
+
+		a.value {
+			transition: color 0.3s ease;
+
+			&:hover {
+				color: #ffffff;
+			}
 		}
 	}
 

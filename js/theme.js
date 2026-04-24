@@ -1,52 +1,84 @@
 (function($) {
 	'use strict';
 
-	var nav_offset_top = $('header').height() + 50;
+	var nav_offset_top = $('.header_area').outerHeight();
 
 	/*-------------------------------------------------------------------------------
 	Navbar Fixed
 	-------------------------------------------------------------------------------*/
-	
-	function navbarFixed() {
-	if ($('.header_area').length) {
-		$(window).on('scroll', function () {
-		var scroll = $(window).scrollTop();
 
-		if (scroll >= nav_offset_top) {
-			$('.header_area').addClass('navbar_fixed');
-		} else {
-			$('.header_area').removeClass('navbar_fixed');
+	function navbarFixed() {
+		if ($('.header_area').length) {
+
+			$(window).on('scroll', function () {
+
+				if ($('.navbar-toggler').hasClass('active')) return;
+
+				var scroll = $(window).scrollTop();
+
+				if (scroll >= nav_offset_top) {
+					$('.header_area').addClass('navbar_fixed');
+				} else {
+					$('.header_area').removeClass('navbar_fixed');
+				}
+			});
 		}
-		});
-	}
 	}
 	navbarFixed();
 
 
 	/*-------------------------------------------------------------------------------
-	Active Nav Link on Scroll (ScrollSpy)
+	Active Nav Link on Scroll (Improved)
 	-------------------------------------------------------------------------------*/
 	function navActiveOnScroll() {
-	var sections = $('section');
-	var navLinks = $('.menu_nav .nav-link');
+		var sections = $('section');
+		var navLinks = $('.menu_nav .nav-link');
 
-	$(window).on('scroll', function () {
-		var currentPos = $(this).scrollTop() + nav_offset_top + 50;
+		$(window).on('scroll', function () {
+			var currentPos = $(this).scrollTop() + nav_offset_top + 80;
 
-		sections.each(function () {
-		var top = $(this).offset().top;
-		var bottom = top + $(this).outerHeight();
-		var id = $(this).attr('id');
+			sections.each(function () {
+				var top = $(this).offset().top;
+				var bottom = top + $(this).outerHeight();
+				var id = $(this).attr('id');
 
-		if (currentPos >= top && currentPos <= bottom) {
-			navLinks.removeClass('active');
-
-			$('.menu_nav .nav-link[href="#' + id + '"]').addClass('active');
-		}
+				if (currentPos >= top && currentPos <= bottom) {
+					navLinks.removeClass('active');
+					$('.menu_nav .nav-link[href="#' + id + '"]').addClass('active');
+				}
+			});
 		});
-	});
 	}
 	navActiveOnScroll();
+	// let ticking = false;
+
+	// $(window).on('scroll', function () {
+	// 	if (!ticking) {
+	// 		window.requestAnimationFrame(function () {
+	// 			updateActive();
+	// 			ticking = false;
+	// 		});
+	// 		ticking = true;
+	// 	}
+	// });
+
+	// function updateActive() {
+	// 	var scrollPos = $(window).scrollTop() + 120;
+
+	// 	$('section').each(function () {
+	// 		var top = $(this).offset().top;
+	// 		var bottom = top + $(this).outerHeight();
+	// 		var id = $(this).attr('id');
+
+	// 		if (scrollPos >= top && scrollPos <= bottom) {
+	// 			if (currentActive !== id) {
+	// 				currentActive = id;
+	// 				$('.menu_nav .nav-link').removeClass('active');
+	// 				$('.menu_nav .nav-link[href="#' + id + '"]').addClass('active');
+	// 			}
+	// 		}
+	// 	});
+	// }
 
 
 	/*-------------------------------------------------------------------------------
@@ -290,39 +322,29 @@
 	/*----------------------------------------------------*/
 
 	/*----------------------------------------------------*/
-	/*  Google map js
+	/*  testimonial js
     /*----------------------------------------------------*/
 
-	const testimonialSwiper = new Swiper('.testimonial-slider', {
+	var testimonialSwiper = new Swiper(".testimonial-slider", {
 		loop: true,
-		centeredSlides: true,
-		speed: 600,
-		grabCursor: true,
-
+		slidesPerView: "auto",
+		spaceBetween: 30,
+		autoHeight: true,
 		autoplay: {
-			delay: 3000,
+			delay: 4000,
 			disableOnInteraction: false,
 		},
-
 		pagination: {
-			el: '.testimonial-slider .swiper-pagination',
+			el: ".testimonial-slider .swiper-pagination",
 			clickable: true,
 		},
-
 		breakpoints: {
-			0: {
-			slidesPerView: 1,
-			spaceBetween: 20,
-			centeredSlides: false, // 🔥 important for mobile
-			},
 			768: {
-			slidesPerView: 1,
-			centeredSlides: true,
+				slidesPerView: 2,
 			},
-			1024: {
-			slidesPerView: 1,
-			centeredSlides: true,
-			}
-		}
+			1200: {
+				slidesPerView: 3,
+			},
+		},
 	});
 })(jQuery);

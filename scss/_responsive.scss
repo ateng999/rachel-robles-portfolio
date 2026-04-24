@@ -1,20 +1,8 @@
 @media (max-width: 1619px) {
-	/* Main Menu Area css
-	============================================================================================ */
-	.header_area .navbar .search {
-		margin-left: 40px;
-	}
-	/* End Main Menu Area css
-	============================================================================================ */
 }
 @media (max-width: 1300px) {
 }
 @media (max-width: 1199px) {
-	/* Main Menu Area css
-	============================================================================================ */
-	.header_area .navbar .nav .nav-item {
-		margin-right: 28px;
-	}
 	/* End Main Menu Area css
 	============================================================================================ */
 	/* Home Banner Area css
@@ -96,6 +84,16 @@
 		border-bottom: 1px solid #ededed33;
 		border-radius: 0px;
 		color: #fff;
+		&::after {
+			bottom: 0;
+		}
+		&:hover,
+		&:active {
+			color: $title-color;
+			&::after {
+				width: 0;
+			}
+		}
 	}
 	.header_area .navbar .search {
 		margin-left: 0px;
@@ -119,12 +117,8 @@
 		line-height: 40px;
 		color: #fff;
 	}
-	.header_area.white_menu.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link {
-		line-height: 40px;
-		color: #fff;
-	}
-	.header_area.white_menu .navbar .nav .nav-item .nav-link {
-		color: #222;
+	.header_area.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link::after {
+		bottom: 0;
 	}
 	/* End Main Menu Area css
 	============================================================================================ */
@@ -141,10 +135,7 @@
 	/* Footer Area css
 	============================================================================================ */
 	.footer_area {
-		padding-top: 80px !important;
-		padding-bottom: 80px !important;
 		background-image: none !important;
-		background-color: #fcf8ff;
 	}
 	/* End Contact page Area css
 	============================================================================================ */
@@ -210,40 +201,10 @@
 @media (max-width: 600px) {
 }
 @media (max-width: 575px) {
-	.header_area + section,
-	.header_area + row,
-	.header_area + div {
-		margin-top: 0px;
-	}
-	/* Home Banner Area css
-	============================================================================================ */
-	.home_banner_area .banner_inner .banner_content h2 {
-		font-size: 28px;
-		line-height: 38px;
-	}
-	.home_banner_area {
-		min-height: 450px;
-	}
-	.home_banner_area .banner_inner {
-		min-height: 450px;
-	}
-	.home_banner_area .banner_inner .banner_content img {
-		display: none;
-	}
-	.home_banner_area .banner_inner .banner_content h5 {
-		margin-top: 0px;
-	}
-	/* End Home Banner Area css
-	============================================================================================ */
 	.section_gap {
 		padding-top: 140px;
 		padding-bottom: 70px;
 	}
-
-	/* End Elements Area css
-	============================================================================================ */
-	/* End Blog Page Area css
-	============================================================================================ */
 	/* Footer Area css
 	============================================================================================ */
 	.footer-area {
@@ -260,13 +221,6 @@
 }
 
 @media (max-width: 480px) {
-	/* Main Menu Area css
-	============================================================================================ */
-	.header_area .navbar-collapse {
-		max-height: 250px;
-	}
-	/* End Main Menu Area css
-	============================================================================================ */
 
 	/* Home Banner Area css
 	============================================================================================ */
