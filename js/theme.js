@@ -50,36 +50,6 @@
 		});
 	}
 	navActiveOnScroll();
-	// let ticking = false;
-
-	// $(window).on('scroll', function () {
-	// 	if (!ticking) {
-	// 		window.requestAnimationFrame(function () {
-	// 			updateActive();
-	// 			ticking = false;
-	// 		});
-	// 		ticking = true;
-	// 	}
-	// });
-
-	// function updateActive() {
-	// 	var scrollPos = $(window).scrollTop() + 120;
-
-	// 	$('section').each(function () {
-	// 		var top = $(this).offset().top;
-	// 		var bottom = top + $(this).outerHeight();
-	// 		var id = $(this).attr('id');
-
-	// 		if (scrollPos >= top && scrollPos <= bottom) {
-	// 			if (currentActive !== id) {
-	// 				currentActive = id;
-	// 				$('.menu_nav .nav-link').removeClass('active');
-	// 				$('.menu_nav .nav-link[href="#' + id + '"]').addClass('active');
-	// 			}
-	// 		}
-	// 	});
-	// }
-
 
 	/*-------------------------------------------------------------------------------
 	Smooth Scroll

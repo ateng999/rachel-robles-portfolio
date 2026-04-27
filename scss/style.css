@@ -2291,9 +2291,11 @@ h6 {
 .glass-btn:hover {
   transform: translateY(-2px) scale(1.02);
   box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.12), inset 0 -3px 8px rgba(0, 0, 0, 0.5), 0 12px 30px rgba(0, 0, 0, 0.5);
+  color: #00f0ff;
 }
 .glass-btn:active {
   transform: scale(0.97);
+  color: #00f0ff;
 }
 
 @keyframes liquidFlow {
@@ -2675,9 +2677,8 @@ h6 {
   transition: all 0.3s ease;
 }
 .portfolio_area .portfolio_filter button.active, .portfolio_area .portfolio_filter button:hover {
-  background: #00f5ff;
-  color: #000;
-  border-color: #00f5ff;
+  color: #00f5ff;
+  border-color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 5px 20px rgba(0, 245, 255, 0.2);
 }
@@ -3206,7 +3207,7 @@ h6 {
 /* Footer Area css
 ============================================================================================ */
 .footer_area {
-  padding: 120px 0;
+  padding: 120px 0 40px;
   position: relative;
   background-color: #000000;
 }
@@ -3254,7 +3255,7 @@ h6 {
   }
 }
 .footer_area .footer_social a i:hover {
-  color: #0047CC;
+  color: #00f5ff;
 }
 .footer_area .footer_bottom {
   text-align: center;
@@ -3263,7 +3264,7 @@ h6 {
   margin-bottom: 0;
 }
 .footer_area .footer_bottom a {
-  color: #0047CC;
+  color: #00f5ff;
 }
 
 /* End Footer Area css
