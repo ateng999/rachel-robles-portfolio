@@ -204,7 +204,7 @@
 	h2 {
 		margin-bottom: 50px;
 		font-size: 3rem;
-		font-weight: 600;
+		font-weight: 300;
 		text-align: left;
 		letter-spacing: -1px;
 		background: linear-gradient(90deg, #fff, #00f5ff);
@@ -524,15 +524,15 @@
 ============================================================================================ */
 .portfolio_area {
 	padding: 120px 0 30px;
-	background: radial-gradient(circle at top, #0a0d14, #05070a);
+	background: $black;
 
 	.section_title {
 		text-align: center;
 		margin-bottom: 60px;
 
 		h2 {
-			font-size: 2.8rem;
-			font-weight: 600;
+			font-size: 3rem;
+			font-weight: 300;
 			letter-spacing: -1px;
 			background: linear-gradient(90deg, #fff, #00f5ff);
 			-webkit-background-clip: text;
@@ -846,8 +846,6 @@
 		img {
 			width: 80px;
 			height: 80px;
-			border-radius: 50%;
-			object-fit: cover;
 			margin: 20px 0;
 		}
 
@@ -857,10 +855,18 @@
 		}
 
 		.role {
-			font-size: 14px;
+			font-size: 15px;
+			color: #aaa;
+			display: block;
+			line-height: 1.2;
+		}
+
+		.company {
+			font-size: 10px;
 			color: #aaa;
 			display: block;
 			margin-bottom: 10px;
+			line-height: 1;
 		}
 
 		.stars {
