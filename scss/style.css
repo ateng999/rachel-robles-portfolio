@@ -446,10 +446,17 @@ body.menu-open {
     font-size: 40px;
   }
 }
-.home_banner_area .banner_inner .banner_content h5 {
+.home_banner_area .banner_inner .banner_content h2 {
   font-size: 24px;
-  margin-bottom: 35px;
+  margin-bottom: 50px;
   text-align: center;
+}
+.home_banner_area .banner_inner .banner_content p {
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  opacity: 0.7;
+  width: 50%;
 }
 .home_banner_area .banner_inner .banner_content .primary_btn {
   margin-right: 20px;
@@ -767,6 +774,7 @@ body.menu-open {
   transition: 0.3s;
 }
 .contact_area .btn_submit:hover {
+  background: #00f5ff;
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
 }
@@ -3217,7 +3225,7 @@ h6 {
 /* Footer Area css
 ============================================================================================ */
 .footer_area {
-  padding: 120px 0 40px;
+  padding: 120px 0 30px;
   position: relative;
   background-color: #000000;
 }
@@ -3233,12 +3241,17 @@ h6 {
 }
 @media (max-width: 1024px) {
   .footer_area {
-    padding: 60px 0 30px;
+    padding: 60px 0 10px;
   }
 }
 .footer_area .footer_logo {
   margin: auto;
   width: 30%;
+}
+@media (max-width: 991px) {
+  .footer_area .footer_logo {
+    width: 60%;
+  }
 }
 .footer_area .footer_logo h4 {
   font-size: 20px;
@@ -3246,6 +3259,11 @@ h6 {
   margin-top: 35px;
   text-transform: uppercase;
   text-align: center;
+}
+@media (max-width: 991px) {
+  .footer_area .footer_logo h4 {
+    margin-top: 20px;
+  }
 }
 .footer_area .footer_social {
   text-align: center;

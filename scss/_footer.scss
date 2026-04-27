@@ -1,7 +1,7 @@
 /* Footer Area css
 ============================================================================================ */
 .footer_area {
-	padding: 120px 0 40px;
+	padding: 120px 0 30px;
 	position: relative;
 	background-color: #000000;
 	&:before {
@@ -15,17 +15,23 @@
 		z-index: -1;
 	}
 	@media (max-width: 1024px) {
-		padding: 60px 0 30px;
+		padding: 60px 0 10px;
 	}
 	.footer_logo {
 		margin: auto;
 		width: 30%;
+		@media (max-width: 991px) {
+			width: 60%;
+		}
 		h4 {
 			font-size: 20px;
 			color: $title-color;
 			margin-top: 35px;
 			text-transform: uppercase;
 			text-align: center;
+			@media (max-width: 991px) {
+				margin-top: 20px;
+			}
 		}
 	}
 	.footer_social {
