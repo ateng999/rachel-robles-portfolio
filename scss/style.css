@@ -124,8 +124,10 @@ button:focus {
   font-size: 60px;
   font-weight: 300;
   margin-bottom: 30px;
-  line-height: 50px;
   text-transform: uppercase;
+  background: linear-gradient(90deg, #fff, #00f5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 @media (max-width: 991px) {
   .main_title h2 br {
@@ -666,7 +668,7 @@ body.menu-open {
   font-size: 18px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #9ca3af;
+  color: #00f5ff;
 }
 .contact_area .info_card .value {
   font-size: 14px;
@@ -742,7 +744,7 @@ body.menu-open {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 .contact_area .form_group input:not(:-moz-placeholder) + label, .contact_area .form_group textarea:not(:-moz-placeholder) + label {
-  top: 6px;
+  top: 10px;
   font-size: 10px;
   opacity: 0.7;
 }
@@ -750,7 +752,7 @@ body.menu-open {
 .contact_area .form_group textarea:focus + label,
 .contact_area .form_group input:not(:placeholder-shown) + label,
 .contact_area .form_group textarea:not(:placeholder-shown) + label {
-  top: 6px;
+  top: 10px;
   font-size: 10px;
   opacity: 0.7;
 }
@@ -2201,6 +2203,8 @@ h6 {
 }
 .about_area .main_title p {
   margin-bottom: 20px;
+  opacity: 0.7;
+  color: #fff;
 }
 @media (max-width: 767px) {
   .about_area .main_title p {
@@ -2350,10 +2354,9 @@ h6 {
 }
 .skills h2 {
   margin-bottom: 50px;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 300;
   text-align: left;
-  letter-spacing: -1px;
   background: linear-gradient(90deg, #fff, #00f5ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2516,6 +2519,9 @@ h6 {
 .services_area .section_title h2 {
   font-size: 3.5rem;
   font-weight: 300;
+  background: linear-gradient(90deg, #fff, #00f5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .services_area .section_title p {
   opacity: 0.7;
@@ -2645,7 +2651,7 @@ h6 {
   margin-bottom: 60px;
 }
 .portfolio_area .section_title h2 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 300;
   letter-spacing: -1px;
   background: linear-gradient(90deg, #fff, #00f5ff);
@@ -3232,7 +3238,7 @@ h6 {
 }
 .footer_area .footer_logo {
   margin: auto;
-  width: 40%;
+  width: 30%;
 }
 .footer_area .footer_logo h4 {
   font-size: 20px;
@@ -3247,6 +3253,7 @@ h6 {
 }
 .footer_area .footer_social a {
   padding: 0 20px;
+  transition: 0.1s ease-in-out;
 }
 .footer_area .footer_social a i {
   color: #788489;
@@ -3260,6 +3267,7 @@ h6 {
 }
 .footer_area .footer_social a i:hover {
   color: #00f5ff;
+  scale: 1.2;
 }
 .footer_area .footer_bottom {
   text-align: center;

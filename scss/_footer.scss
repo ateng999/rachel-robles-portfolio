@@ -19,7 +19,7 @@
 	}
 	.footer_logo {
 		margin: auto;
-		width: 40%;
+		width: 30%;
 		h4 {
 			font-size: 20px;
 			color: $title-color;
@@ -33,6 +33,7 @@
 		margin: 25px 0px 30px;
 		a {
 			padding: 0 20px;
+			transition: .1s ease-in-out;
 			i {
 				color: #788489;
 				font-size: 22px;
@@ -42,6 +43,7 @@
 				}
 				&:hover {
 					color: $primary-color;
+					scale: 1.2;
 				}
 			}
 		}
