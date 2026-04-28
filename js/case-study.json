@@ -1,0 +1,384 @@
+{
+	"projects": [
+		{
+			"id": "web1",
+			"title": "Strategic Website Redesign & UX Optimization",
+			"tagline": "Transforming an outdated interface into a modern, conversion-driven experience.",
+
+			"overview": "A complete redesign of a legacy website focused on improving usability, performance, and conversion rates. The project involved UX restructuring, responsive design, and front-end optimization.",
+			"problem": "The original website had outdated visuals, poor responsiveness, and slow loading speed affecting engagement.",
+			"solution": "Rebuilt the interface using modern UI/UX practices, optimized assets, and improved responsiveness across devices.",
+
+			"role": "UI/UX Design, Front-End Development",
+			"tools": ["Figma", "HTML", "SCSS", "JavaScript"],
+
+			"results": [
+				"+35% user engagement",
+				"40% faster load time",
+				"Improved mobile responsiveness"
+			],
+
+			"images": [
+				{
+					"type": "image",
+					"src": "img/portfolio/web1.png"
+				}
+			]
+		},
+
+		{
+			"id": "web2",
+			"title": "Enterprise Website Maintenance & Performance Optimization",
+			"tagline": "Enhancing performance and scalability for enterprise systems.",
+
+			"overview": "Handled ongoing maintenance and large-scale updates for a corporate website.",
+			"problem": "Frequent content updates and inconsistent design elements created inefficiencies.",
+			"solution": "Standardized layouts, optimized performance, and streamlined content deployment workflows.",
+
+			"role": "Front-End Developer, Web Maintenance",
+			"tools": ["HTML", "CSS", "JavaScript", "Photoshop", "Illustrator", "SVN", "Git", "CMS"],
+
+			"results": [
+				"Faster page deployment workflow",
+				"Improved consistency across pages",
+				"Reduced loading time"
+			],
+
+			"images": [
+				{
+					"type": "image",
+					"src": "img/portfolio/web2.png"
+				}
+			]
+		},
+
+		{
+			"id": "web3",
+			"title": "Full Website Revamp & Interface Modernization",
+			"tagline": "Bringing legacy interfaces into modern design systems.",
+
+			"overview": "Revamped a corporate site to improve usability and performance.",
+			"problem": "Cluttered layout and outdated structure impacted user navigation.",
+			"solution": "Simplified layout, improved structure, and optimized frontend performance.",
+
+			"role": "Front-End Developer",
+			"tools": ["HTML", "CSS", "JavaScript", "Photoshop", "Illustrator"],
+
+			"results": [
+				"Improved navigation clarity",
+				"Enhanced user experience",
+				"Faster page load time",
+				"Enhanced UX"
+			],
+
+			"images": [
+				{
+					"type": "image",
+					"src": "img/portfolio/web3.png"
+				}
+			]
+		},
+
+		{
+			"id": "web4",
+			"title": "Scalable Front-End Development for Corporate Platform",
+			"tagline": "Building scalable UI systems for enterprise-level applications.",
+
+			"overview": "Developed frontend pages ensuring consistency and responsiveness.",
+			"problem": "Needed scalable frontend implementation across multiple pages. Broken sliders",
+			"solution": "Implemented responsive layouts and reusable components.",
+
+			"role": "Front-End Developer",
+			"tools": ["HTML", "CSS", "JavaScript"],
+
+			"results": [
+				"Consistent UI across pages",
+				"Improved responsiveness",
+				"Efficient development workflow"
+			],
+
+			"images": [
+				{
+					"type": "image",
+					"src": "img/portfolio/web4.png"
+				}
+			]
+		},
+
+		{
+			"id": "web5",
+			"title": "High-Volume Page Redevelopment & UI Standardization",
+			"tagline": "Efficiently rebuilding large-scale page systems.",
+
+			"overview": "Redeveloped pages to enhance usability and performance.",
+			"problem": "Outdated pages with poor structure and inconsistent design.",
+			"solution": "Refactored layout, improved structure, and optimized assets.",
+
+			"role": "Front-End Developer",
+			"tools": ["HTML", "SCSS", "JavaScript"],
+
+			"results": [
+				"Improved layout clarity",
+				"Better user experience",
+				"Optimized loading performance",
+				"Better maintainability"
+			],
+
+			"images": [
+				{
+					"type": "image",
+					"src": "img/portfolio/web5.png"
+				}
+			]
+		},
+
+		{
+			"id": "web6",
+			"title": "Conversion-Focused Website Development",
+			"tagline": "Building a performance-driven website optimized for lead generation.",
+
+			"overview": "Developed a WordPress-based website optimized for conversions, speed, and user engagement.",
+			"problem": "Needed a high-converting layout for marketing campaigns and the previous site lacked clear CTAs, had slow load times, and poor funnel structure leading to low conversions.",
+			"solution": "Implemented a structured conversion funnel, optimized page speed, and refined UI to guide users toward key actions.",
+
+			"role": "Front-End Developer",
+			"tools": ["WordPress", "Elementor", "HTML", "CSS", "Systeme.io"],
+
+			"results": [
+				"Improved conversion rate",
+				"Optimized page load speed",
+				"Better CTA visibility",
+				"Enhanced mobile experience"
+			],
+
+			"images": [
+				{
+					"type": "image",
+					"src": "img/portfolio/web6.png"
+				}
+			]
+		},
+
+		{
+			"id": "photobook1",
+			"title": "Luxury Wedding Photobook Design",
+			"tagline": "Crafting timeless visual storytelling through elegant editorial design.",
+
+			"overview": "Designed a high-end wedding photobook focusing on storytelling, emotional flow, and premium layout composition.",
+			"problem": "Raw photo collections lacked structure and narrative, making it difficult to deliver a cohesive storytelling experience.",
+			"solution": "Crafted page sequences with strong visual storytelling.",
+
+			"role": "Layout Designer",
+			"tools": ["Lightroom", "Canva"],
+
+			"results": [
+				"Improved storytelling clarity",
+				"High client satisfaction",
+				"Print-ready premium output",
+				"Enhanced visual consistency"
+			],
+
+			"images": [
+				{
+					"type": "iframe",
+					"src": "https://simplebooklet.com/embed.php?wpKey=yC22fkJxSKMkTnkCdZSTzl&source=embed"
+				}
+			]
+		},
+
+		{
+			"id": "photobook2",
+			"title": "Elegant Wedding Album Layout",
+			"tagline": "Story-driven wedding album design.",
+
+			"overview": "Designed a premium wedding album layout.",
+			"problem": "Unstructured visual narrative.",
+			"solution": "Created storytelling layout.",
+
+			"role": "Layout Designer",
+			"tools": ["Lightroom", "Canva"],
+
+			"results": [
+				"Better storytelling",
+				"Client satisfaction"
+			],
+
+			"images": [
+				{
+					"type": "iframe",
+					"src": "https://heyzine.com/flip-book/662eaef619.html"
+				}
+			]
+		},
+
+		{
+			"id": "kidsbook",
+			"title": "Interactive Children’s Activity Book",
+			"tagline": "Engaging educational design for kids.",
+
+			"overview": "Designed an interactive activity book.",
+			"problem": "Low engagement educational material.",
+			"solution": "Created fun and interactive layouts.",
+
+			"role": "Layout Designer",
+			"tools": ["Lightroom", "Canva"],
+
+			"results": [
+				"Improved engagement",
+				"Interactive experience"
+			],
+
+			"images": [
+				{
+					"type": "iframe",
+					"src": "https://heyzine.com/flip-book/c59bb57b55.html"
+				}
+			]
+		},
+
+		{
+			"id": "packaging1",
+			"title": "Organic Product Packaging & Branding",
+			"tagline": "Designing natural product identity systems.",
+
+			"overview": "Created packaging design for supplement products.",
+			"problem": "Lack of cohesive brand identity.",
+			"solution": "Designed clean and natural visuals.",
+
+			"role": "Graphic Designer",
+			"tools": ["Photoshop", "Illustrator"],
+
+			"results": [
+				"Improved product visibility",
+				"Stronger brand perception",
+				"Consistent packaging system"
+			],
+
+			"images": [
+				{
+					"type": "image",
+					"src": "img/portfolio/mockup1.png"
+				}
+			]
+		},
+
+		{
+			"id": "packaging2",
+			"title": "Premium Supplement Packaging Design",
+			"tagline": "High-end product visualization and branding.",
+
+			"overview": "Created packaging design for supplement products.",
+			"problem": "Needed packaging that stands out and communicates value.",
+			"solution": "Designed bold visuals with clear hierarchy and branding.",
+
+			"role": "Graphic Designer",
+			"tools": ["Photoshop", "Illustrator"],
+
+			"results": [
+				"Improved product visibility",
+				"Stronger brand perception",
+				"Professional packaging finish"
+			],
+
+			"images": [
+				{
+					"type": "image",
+					"src": "img/portfolio/mockup2.png"
+				}
+			]
+		},
+
+		{
+			"id": "packaging3",
+			"title": "Performance Supplement Packaging",
+			"tagline": "Bold and modern supplement packaging.",
+
+			"overview": "Designed packaging with strong visual hierarchy.",
+			"problem": "Generic product presentation.",
+			"solution": "Created bold and modern design system.",
+
+			"role": "Graphic Designer",
+			"tools": ["Photoshop", "Illustrator"],
+
+			"results": [
+				"Consistent branding",
+				"Scalable design system"
+			],
+
+			"images": [
+				{
+					"type": "image",
+					"src": "img/portfolio/mockup3.png"
+				}
+			]
+		},
+
+		{
+			"id": "packaging4",
+			"title": "Nutraceutical Packaging System",
+			"tagline": "Building scalable packaging systems.",
+
+			"overview": "Designed a full packaging system.",
+			"problem": "Inconsistent product visuals.",
+			"solution": "Standardized packaging design.",
+
+			"role": "Graphic Designer",
+			"tools": ["Photoshop", "Illustrator"],
+
+			"results": [
+				"Consistent branding",
+				"Scalable design system"
+			],
+
+			"images": [
+				{
+					"type": "image",
+					"src": "img/portfolio/mockup4.png"
+				}
+			]
+		},
+
+		{
+			"id": "poster1",
+			"title": "Promotional Campaign Poster Design",
+			"tagline": "High-impact visual communication for marketing campaigns.",
+
+			"overview": "Designed promotional posters for campaigns.",
+			"problem": "Low engagement visuals.",
+			"solution": "Created bold and engaging designs.",
+
+			"role": "Graphic Designer",
+			"tools": ["Canva", "Photoshop"],
+
+			"results": [
+				"Improved engagement",
+				"Stronger visual impact"
+			],
+
+			"images": [
+				{
+					"type": "image",
+					"src": "img/portfolio/poster.gif"
+				}
+			]
+		},
+
+		{
+		"id": "print1",
+		"title": "Marketing Booklet Design",
+		"tagline": "Creating structured and visually engaging print materials.",
+		"overview": "Designed a marketing booklet for promotions.",
+		"problem": "Unstructured content and poor readability.",
+		"solution": "Structured layout and improved visual hierarchy.",
+		"role": "Graphic Designer",
+		"tools": ["Canva"],
+		"results": [
+			"Improved readability",
+			"Professional design output"
+		],
+		"images": [
+			{ "type": "iframe", "src": "https://simplebooklet.com/embed.php?wpKey=QN3gEzRdcoRzPsFESC6Too&source=embed" }
+		]
+		}
+	]
+}

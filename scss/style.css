@@ -2663,13 +2663,16 @@ h6 {
 ============================================================================================ */
 /* Start Portfolio Area css
 ============================================================================================ */
+body.no-scroll {
+  overflow: hidden;
+}
+
 .portfolio_area {
   padding: 120px 0 30px;
   background: #000000;
 }
 .portfolio_area .section_title {
   text-align: center;
-  margin-bottom: 60px;
 }
 .portfolio_area .section_title h2 {
   font-size: 3.5rem;
@@ -2682,6 +2685,11 @@ h6 {
 .portfolio_area .section_title p {
   color: #9ca3af;
   margin-top: 10px;
+}
+.portfolio_area .disclaimer {
+  margin-bottom: 60px;
+  text-align: center;
+  color: #9ca3af;
 }
 .portfolio_area {
   /* FILTER */
@@ -2717,10 +2725,10 @@ h6 {
 }
 .portfolio_area .portfolio_grid .grid-sizer,
 .portfolio_area .portfolio_grid .portfolio_item {
-  width: calc(25% - 18px);
+  width: calc(25% - 16px);
 }
 .portfolio_area .portfolio_grid .gutter-sizer {
-  width: 24px;
+  width: 18px;
 }
 @media (max-width: 991px) {
   .portfolio_area .portfolio_grid .grid-sizer,
@@ -2767,7 +2775,7 @@ h6 {
 .portfolio_area .portfolio_grid .portfolio_item .portfolio_card .portfolio_overlay {
   position: absolute;
   inset: 0;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -2780,6 +2788,7 @@ h6 {
   margin-bottom: 6px;
   transform: translateY(10px);
   transition: 0.4s;
+  line-height: 1;
 }
 .portfolio_area .portfolio_grid .portfolio_item .portfolio_card .portfolio_overlay p {
   font-size: 13px;
@@ -2787,6 +2796,7 @@ h6 {
   margin-bottom: 12px;
   transform: translateY(10px);
   transition: 0.4s;
+  line-height: 1;
 }
 .portfolio_area .portfolio_grid .portfolio_item .portfolio_card .portfolio_overlay .actions {
   display: flex;
@@ -2894,6 +2904,158 @@ h6 {
   color: #fff !important;
 }
 
+/* ==============================
+   MODAL BASE
+============================== */
+#caseModal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
+}
+#caseModal.open {
+  display: block;
+}
+#caseModal .case-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+#caseModal .case-content {
+  position: relative;
+  max-width: 900px;
+  height: 90vh;
+  margin: 5vh auto;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px rgba(255, 255, 255, 0.2);
+  animation: modalFade 0.3s ease;
+}
+#caseModal .case-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.2), transparent 40%);
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  #caseModal .case-content {
+    width: 95%;
+    height: 95vh;
+    padding: 20px;
+  }
+}
+#caseModal .case-content .case-header h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+#caseModal .case-content .case-header .case-tagline {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+#caseModal .case-content .case-body {
+  overflow-y: auto;
+  margin-top: 20px;
+  padding-right: 10px;
+}
+#caseModal .case-content .case-body .case-section {
+  margin-bottom: 24px;
+}
+#caseModal .case-content .case-body .case-section h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 6px;
+}
+#caseModal .case-content .case-body .case-section p {
+  color: rgba(255, 255, 255, 0.75);
+}
+#caseModal .case-content .case-body .case-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  #caseModal .case-content .case-body .case-grid {
+    width: 95%;
+    height: 95vh;
+    grid-template-columns: 1fr;
+  }
+}
+#caseModal .case-content .case-body .case-grid p {
+  color: rgba(255, 255, 255, 0.75);
+}
+#caseModal .case-content .case-body #case-results li {
+  margin-bottom: 6px;
+  color: rgba(255, 255, 255, 0.85);
+}
+#caseModal .case-content .case-body .case-images img {
+  width: 100%;
+  border-radius: 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease;
+}
+#caseModal .case-content .case-body .case-images iframe {
+  width: 100%;
+  height: 80vh;
+}
+#caseModal .case-content .case-body::-webkit-scrollbar {
+  width: 6px;
+}
+#caseModal .case-content .case-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+#caseModal .case-content .case-body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+#caseModal .case-content .case-body::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+#caseModal .case-content .case-body {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+#caseModal .case-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  color: #fff;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+}
+#caseModal .case-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
 /* End Portfolio Area css
 ============================================================================================ */
 /* Start Testimonial Area css
