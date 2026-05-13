@@ -54,6 +54,23 @@
 					scale: 1.2;
 				}
 			}
+
+			&::after {
+				content: attr(title);
+				position: absolute;
+				bottom: -30px;
+				font-size: 12px;
+				opacity: 0;
+				transition: 0.3s;
+				background-color: #000;
+				color: #ffffff;
+			}
+
+			&:hover {
+				::after {
+					opacity: 1;
+				}
+			}
 		}
 	}
 
